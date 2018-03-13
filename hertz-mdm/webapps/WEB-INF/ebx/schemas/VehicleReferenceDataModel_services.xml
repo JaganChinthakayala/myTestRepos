@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=VehicleReferenceDataModel] on Thu Dec 21 09:36:33 CST 2017 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="DisplayFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Display Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/DisplayValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Generate Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateSIPPDataWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Create SIPP Data</label>
+        </documentation>
+        <resourcePath>/services/vehicle/LaunchCreateSIPPDataRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/SIPPData</path>
+                <path>/root/SIPPData/SIPPCategory</path>
+                <path>/root/SIPPData/SIPPFuelAirConditioning</path>
+                <path>/root/SIPPData/SIPPType</path>
+                <path>/root/SIPPData/SIPPTransmissionDrive</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateVehicleReferenceWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Create Vehicle Reference Data</label>
+        </documentation>
+        <resourcePath>/services/vehicle/LaunchCreateVehicleReferenceRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/ChromeNewVehicleData/Styles</path>
+                <path>/root/ChromeNewVehicleData/BodyStyles</path>
+                <path>/root/ChromeNewVehicleData/Categories</path>
+                <path>/root/ChromeNewVehicleData/CategoryHeaders</path>
+                <path>/root/ChromeNewVehicleData/Colors</path>
+                <path>/root/ChromeNewVehicleData/Divisions</path>
+                <path>/root/ChromeNewVehicleData/StyleImageLinks</path>
+                <path>/root/ChromeNewVehicleData/Manufacturers</path>
+                <path>/root/ChromeNewVehicleData/Models</path>
+                <path>/root/ChromeNewVehicleData/MktClass</path>
+                <path>/root/ChromeNewVehicleData/OptHeaders</path>
+                <path>/root/ChromeNewVehicleData/Options</path>
+                <path>/root/ChromeNewVehicleData/OptKinds</path>
+                <path>/root/ChromeNewVehicleData/Prices</path>
+                <path>/root/ChromeNewVehicleData/Standards</path>
+                <path>/root/ChromeNewVehicleData/StdHeaders</path>
+                <path>/root/ChromeNewVehicleData/StyleCats</path>
+                <path>/root/ChromeNewVehicleData/Subdivisions</path>
+                <path>/root/ChromeNewVehicleData/TechSpecs</path>
+                <path>/root/ChromeNewVehicleData/TechTitleHeader</path>
+                <path>/root/ChromeNewVehicleData/TechTitles</path>
+                <path>/root/ChromeNewVehicleData/Version</path>
+                <path>/root/ChromeNewVehicleData/Year</path>
+                <path>/root/Sipp</path>
+                <path>/root/CarClass</path>
+                <path>/root/CarGroup</path>
+                <path>/root/CarGroupType</path>
+                <path>/root/Catalog</path>
+                <path>/root/ExteriorColor</path>
+                <path>/root/InteriorColor</path>
+                <path>/root/HighlightCategoryConfig</path>
+                <path>/root/HighlightTechspecConfig</path>
+                <path>/root/Make</path>
+                <path>/root/RoofColor</path>
+                <path>/root/SeatType</path>
+                <path>/root/SIPPData/PseudoCarCode</path>
+                <path>/root/SIPPData/SIPPCategory</path>
+                <path>/root/SIPPData/SIPPFuelAirConditioning</path>
+                <path>/root/SIPPData/SIPPType</path>
+                <path>/root/SIPPData/SIPPTransmissionDrive</path>
+                <path>/root/SIPPData/SIPPCarClassRelationship</path>
+                <path>/root/VehicleColor</path>
+                <path>/root/HighlightName</path>
+                <path>/root/HighlightType</path>
+                <path>/root/WheelDrive</path>
+                <path>/root/SIPPData/SIPPCarGroupRelationship</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainSIPPDataWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain SIPP Data</label>
+        </documentation>
+        <resourcePath>/services/vehicle/LaunchMaintainSIPPDataRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/SIPPData/SIPPCategory{1}</path>
+                <path>/root/SIPPData/SIPPFuelAirConditioning{1}</path>
+                <path>/root/SIPPData/SIPPType{1}</path>
+                <path>/root/SIPPData/SIPPTransmissionDrive{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainVehicleReferenceWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Vehicle Reference Data</label>
+        </documentation>
+        <resourcePath>/services/vehicle/LaunchMaintainVehicleReferenceRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/ChromeNewVehicleData/Styles{1}</path>
+                <path>/root/ChromeNewVehicleData/BodyStyles{1}</path>
+                <path>/root/ChromeNewVehicleData/Categories{1}</path>
+                <path>/root/ChromeNewVehicleData/CategoryHeaders{1}</path>
+                <path>/root/ChromeNewVehicleData/Colors{1}</path>
+                <path>/root/ChromeNewVehicleData/Divisions{1}</path>
+                <path>/root/ChromeNewVehicleData/StyleImageLinks{1}</path>
+                <path>/root/ChromeNewVehicleData/Manufacturers{1}</path>
+                <path>/root/ChromeNewVehicleData/Models{1}</path>
+                <path>/root/ChromeNewVehicleData/MktClass{1}</path>
+                <path>/root/ChromeNewVehicleData/OptHeaders{1}</path>
+                <path>/root/ChromeNewVehicleData/Options{1}</path>
+                <path>/root/ChromeNewVehicleData/OptKinds{1}</path>
+                <path>/root/ChromeNewVehicleData/Prices{1}</path>
+                <path>/root/ChromeNewVehicleData/Standards{1}</path>
+                <path>/root/ChromeNewVehicleData/StdHeaders{1}</path>
+                <path>/root/ChromeNewVehicleData/StyleCats{1}</path>
+                <path>/root/ChromeNewVehicleData/Subdivisions{1}</path>
+                <path>/root/ChromeNewVehicleData/TechSpecs{1}</path>
+                <path>/root/ChromeNewVehicleData/TechTitleHeader{1}</path>
+                <path>/root/ChromeNewVehicleData/TechTitles{1}</path>
+                <path>/root/ChromeNewVehicleData/Version{1}</path>
+                <path>/root/ChromeNewVehicleData/Year{1}</path>
+                <path>/root/Sipp{1}</path>
+                <path>/root/CarClass{1}</path>
+                <path>/root/CarGroup{1}</path>
+                <path>/root/CarGroupType{1}</path>
+                <path>/root/Catalog{1}</path>
+                <path>/root/ExteriorColor{1}</path>
+                <path>/root/InteriorColor{1}</path>
+                <path>/root/HighlightCategoryConfig{1}</path>
+                <path>/root/HighlightTechspecConfig{1}</path>
+                <path>/root/Make{1}</path>
+                <path>/root/RoofColor{1}</path>
+                <path>/root/SeatType{1}</path>
+                <path>/root/SIPPData/PseudoCarCode{1}</path>
+                <path>/root/SIPPData/SIPPCategory{1}</path>
+                <path>/root/SIPPData/SIPPFuelAirConditioning{1}</path>
+                <path>/root/SIPPData/SIPPType{1}</path>
+                <path>/root/SIPPData/SIPPTransmissionDrive{1}</path>
+                <path>/root/SIPPData/SIPPCarClassRelationship{1}</path>
+                <path>/root/VehicleColor{1}</path>
+                <path>/root/HighlightName{1}</path>
+                <path>/root/HighlightType{1}</path>
+                <path>/root/WheelDrive{1}</path>
+                <path>/root/SIPPData/SIPPCarGroupRelationship{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

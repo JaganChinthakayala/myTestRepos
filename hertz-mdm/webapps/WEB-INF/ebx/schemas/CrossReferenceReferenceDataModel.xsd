@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=CrossReferenceReferenceDataModel] on Thu Jul 27 12:26:50 EDT 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:include schemaLocation="urn:ebx:module:hertz-mdm:/WEB-INF/ebx/schemas/BasicTypesDataModel.xsd"/>
+    <xs:include schemaLocation="urn:ebx:module:hertz-mdm:/WEB-INF/ebx/schemas/CommonTypesDataModel.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <osd:replication>
+                <name>CrossReferenceReferenceDataSet</name>
+                <dataSpace>CrossReferenceMasterDataSpace</dataSpace>
+                <dataSet>CrossReferenceReferenceDataSet</dataSet>
+                <refresh>onCommit</refresh>
+                <table>
+                    <path>/root/CrossReferenceType</path>
+                    <nameInDatabase>db_crossref_ref_cross_reference_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/CrossReferenceDataType</path>
+                    <nameInDatabase>db_crossref_ref_cross_reference_datatype</nameInDatabase>
+                </table>
+            </osd:replication>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CrossReferenceDataType" type="BaseStringId" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Cross Reference Data Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/id </primaryKeys>
+                                <defaultLabel>${./name}</defaultLabel>
+                                <defaultLabel xml:lang="en-US">${./name}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="CrossReferenceType" type="BaseStringId" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Cross Reference Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/id </primaryKeys>
+                                <defaultLabel>${./name}</defaultLabel>
+                                <defaultLabel xml:lang="en-US">${./name}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

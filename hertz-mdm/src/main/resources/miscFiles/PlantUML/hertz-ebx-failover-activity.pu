@@ -1,0 +1,65 @@
+@startuml
+'skinparam handwritten true
+'skinparam defaultFontName Segoe Print
+scale max 845 height
+
+' Define Swimlanes
+|ebx1| Primary EBX Server
+|ebx2| Standby EBX Machine
+|#AntiqueWhite|loadbalancer| Azure Load Balancer
+
+
+|ebx2|
+start
+
+repeat
+ |ebx2|
+ :Send "heartbeat" HTTP Request>
+ -> ""?repositoryInformationRequest=heart_beat_count"";
+
+ |ebx1|
+ :Respond with count>
+ -> OK 200;
+
+ |ebx2|
+ :Evaluate response]
+repeat while (is Primary EBX working?) is (yes)
+
+-> Primary EBX server down;
+
+:Send HTTP Request to activate standby>
+-> ""?activationKeyFromStandbyMode=<min8alphanumeric>"";
+
+|ebx2|
+partition "EBX Server" {
+ :Take control of Repository & initialize server]
+ -> OK 200;
+}
+
+:Change **URL pass through** from
+  Primary **to Standby** IP address;
+
+fork
+ :Instruct Load Balancer to **remove Primary**
+ EBX Server from address pool>
+
+ |loadbalancer|
+ :**Remove Primary** EBX Server NIC
+ from back-end address pool]
+
+fork again
+ |ebx2|
+ :Instruct Load Balancer to **add Standby**
+ EBX Server to address pool>
+
+ |loadbalancer|
+ :**Add Standby** EBX Server NIC
+ to back-end address pool]
+
+end fork
+
+|ebx2|
+:Send notification of switch;
+
+stop
+@enduml

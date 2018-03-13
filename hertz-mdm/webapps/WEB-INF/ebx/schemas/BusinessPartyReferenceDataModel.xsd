@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=BusinessPartyReferenceDataSet] on Thu Jun 22 11:40:05 EDT 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:include schemaLocation="urn:ebx:module:hertz-mdm:/WEB-INF/ebx/schemas/BasicTypesDataModel.xsd"/>
+    <xs:include schemaLocation="urn:ebx:module:hertz-mdm:/WEB-INF/ebx/schemas/CommonTypesDataModel.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:extensions class="com.hertz.mdm.businessparty.schemaextension.BusinessPartySchemaExtension"/>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../hertz-mdm/webapps/hertz-mdm/../../src">
+                <javaPathConstants typeName="com.hertz.mdm.businessparty.path.BusinessPartyReferencePaths">
+                    <nodes root="/" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+            <osd:replication>
+                <name>BusinessPartyReferenceDataSet</name>
+                <dataSpace>BusinessPartyMasterDataSpace</dataSpace>
+                <dataSet>BusinessPartyReferenceDataSet</dataSet>
+                <refresh>onCommit</refresh>
+                <table>
+                    <path>/root/BusinessPartyRoleType</path>
+                    <nameInDatabase>db_bptyref_business_party_role_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/BusinessPartyType</path>
+                    <nameInDatabase>db_bptyref_business_party_type</nameInDatabase>
+                </table>
+            </osd:replication>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BusinessPartyRoleType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Business Party Role Type</osd:label>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/base/id </primaryKeys>
+                                    <historyProfile>ebx-allBranches</historyProfile>
+                                    <defaultLabel>${./base/name}</defaultLabel>
+                                </osd:table>
+                                <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roleCategory" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Role Category</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                        <xs:enumeration value="Hertz"/>
+                                        <xs:enumeration value="EBX"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="businessPartyType" type="xs:string" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Business Party Type</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/BusinessPartyType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BusinessPartyType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Business Party Type</osd:label>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/base/id </primaryKeys>
+                                    <historyProfile>ebx-allBranches</historyProfile>
+                                    <defaultLabel>${./base/name}</defaultLabel>
+                                </osd:table>
+                                <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MDMBusinessPartyReferenceCrossReference" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>MDM Business Party Reference Cross Reference</osd:label>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/base/name </primaryKeys>
+                                    <historyProfile>ebx-allBranches</historyProfile>
+                                    <defaultLabel>${./base/name}</defaultLabel>
+                                </osd:table>
+                                <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="mdmReplicationTableName" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>MDM Replication Table Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

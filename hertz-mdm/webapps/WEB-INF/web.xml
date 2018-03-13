@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 3.0//EN"
+  "http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app>
+	<servlet>
+		<servlet-name>hertz-mdm</servlet-name>
+		<description>
+			This servlet is used for registering this web application as an EBX.Platform module.
+			In its init() method, it must call "ModulesRegister.registerWebApp()".
+			You may create a dedicated servlet like here, or reuse an existing servlet.
+		</description>
+		<servlet-class>com.orchestranetworks.ps.module.RegisterServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+		<servlet>
+			<servlet-name>ExportDevArtifacts</servlet-name>
+			<servlet-class>com.orchestranetworks.ps.admin.devartifacts.ExportDevArtifactsService</servlet-class>
+		</servlet>
+		
+		<servlet>
+			<servlet-name>ImportDevArtifacts</servlet-name>
+			<servlet-class>com.orchestranetworks.ps.admin.devartifacts.ImportDevArtifactsService</servlet-class>
+		</servlet>
+		<servlet>
+			<servlet-name>FileDownloader</servlet-name>
+			<servlet-class>com.orchestranetworks.ps.filetransfer.FileDownloader</servlet-class>
+		</servlet>		
+		<servlet-mapping>
+			<servlet-name>ExportDevArtifacts</servlet-name>
+			<url-pattern>/ExportDevArtifacts</url-pattern>
+		</servlet-mapping>
+		
+		<servlet-mapping>
+			<servlet-name>ImportDevArtifacts</servlet-name>
+			<url-pattern>/ImportDevArtifacts</url-pattern>
+		</servlet-mapping>
+	
+		<servlet-mapping>
+			<servlet-name>FileDownloader</servlet-name>
+			<url-pattern>/FileDownloader</url-pattern>
+		</servlet-mapping>
+</web-app>

@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=CrossReferenceDataModel] on Thu Feb 15 14:43:00 EST 2018 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:include schemaLocation="./AuditColumnTypesDataModel.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>none</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="C:/Users/aanand/Documents/HertzPhase1.2Workspace/HertzPhase1.2Workspace/hertz-mdm/webapps/hertz-mdm/../../src">
+                <javaPathConstants typeName="CrossReferencePaths">
+                    <nodes root="/" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Cross_Reference_Data" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Cross Reference Data</osd:label>
+                            <osd:description>Data Model to Hold the various Cross Reference Tables</osd:description>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RDM_LOV_TYPE" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>RDM LOV Type</osd:label>
+                                        <osd:description>Table to hold all the different Types of RDM LOV</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_TYPE </primaryKeys>
+                                            <index name="LOV Status">/ROW_ID /LOV_TYPE </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" minOccurs="0" maxOccurs="1" default="RDM_STATUS" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV TYPE</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50">
+                                                        <xs:annotation>
+                                                            <xs:appinfo>
+                                                                <osd:validation>
+                                                                    <message xml:lang="en-US">Maximum Allowed Character is 50</message>
+                                                                </osd:validation>
+                                                            </xs:appinfo>
+                                                        </xs:annotation>
+                                                    </xs:maxLength>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>List of value Description</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="250"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Line of Value Status</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_COMMENTS" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Comments</osd:label>
+                                                    <osd:description>Line of Value Comments</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1" default="2018-02-13">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_TYPEF2D4E2BF-DC59-407D-91A9-4FC53C795D98">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_TYPE"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="RDM_LOV_STATUS" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>RDM LOV Status</osd:label>
+                                        <osd:description>Table to hold all the different Status for RDM LOV</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_VALUE </primaryKeys>
+                                            <index name="LOV Status">/ROW_ID /LOV_TYPE /LOV_CODE /LOV_VALUE </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" minOccurs="0" maxOccurs="1" default="RDM_STATUS" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV TYPE</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50">
+                                                        <xs:annotation>
+                                                            <xs:appinfo>
+                                                                <osd:validation>
+                                                                    <message xml:lang="en-US">Maximum Allowed Character is 50</message>
+                                                                </osd:validation>
+                                                            </xs:appinfo>
+                                                        </xs:annotation>
+                                                    </xs:maxLength>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV CODE</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_VALUE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV VALUE</osd:label>
+                                                    <osd:description>Value for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>List of value Description</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="250"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_COMMENTS" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Comments</osd:label>
+                                                    <osd:description>Line of Value Comments</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1" default="2018-02-13">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_STATUSF2D4E2BF-DC59-407D-91A9-4FC53C795D98">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_TYPE"/>
+                                    <xs:field xpath="LOV_CODE"/>
+                                    <xs:field xpath="LOV_VALUE"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="RDM_LOV_SYSTEM_REG" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>RDM LOV System Registration</osd:label>
+                                        <osd:description>Table to hold all the different registration for RDM LOV</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_EXT_SYST_NAME </primaryKeys>
+                                            <index name="System Registration Index">/ROW_ID /LOV_EXT_SYST_ID /LOV_EXT_SYST_NAME </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_ID" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System ID</osd:label>
+                                                    <osd:description>Identifier for LOV External System</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_NAME" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System Name</osd:label>
+                                                    <osd:description>Name of the External System</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100">
+                                                        <xs:annotation>
+                                                            <xs:appinfo>
+                                                                <osd:validation>
+                                                                    <message xml:lang="en-US">Maximum Allowed Character is 100</message>
+                                                                </osd:validation>
+                                                            </xs:appinfo>
+                                                        </xs:annotation>
+                                                    </xs:maxLength>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>Description for External LOV System</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="250"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="STATUS" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status of External LOV System</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_COMMENTS" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Comments</osd:label>
+                                                    <osd:description>Provide user comments for the Line of Value</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1" default="2018-02-13">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_SYSTEM_REGB7272299-3279-4F19-91C6-795B46413EBD">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_EXT_SYST_NAME"/>
+                                    <xs:field xpath="LOV_EXT_SYST_ID"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="RDM_LOV_ANCILLARY_PRODUCTS" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>RDM LOV ANCILLARY Products</osd:label>
+                                        <osd:description>Stores the Ancillary Code and Values</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_CODE /LOV_VALUE </primaryKeys>
+                                            <index name="Ancillary Products Index">/ROW_ID /LOV_CODE /LOV_VALUE </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV TYPE</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_TYPE</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_TYPE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV CODE</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_VALUE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Value</osd:label>
+                                                    <osd:description>Value for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>List of value Description</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status for LOV</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1" default="2018-02-13">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="TRANSLATION_ID" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Translation ID</osd:label>
+                                                    <osd:description>Foreign Key to Translation Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_ANCILLARY_TRANSLATION</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_ANCILLARY_PRODUCTS7904BC44-6F6C-4691-A06C-6C20F470ABCB">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_CODE"/>
+                                    <xs:field xpath="LOV_VALUE"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="SOURCE_LOV_ANCILLARY_PRODUCTS" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>SOURCE LOV ANCILLARY Products</osd:label>
+                                        <osd:description>Stores the Ancillary Code and Source</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_EXT_SYST_ID /LOV_CODE /LOV_VALUE </primaryKeys>
+                                            <index name="Ancillary Products Index">/ROW_ID /LOV_TYPE /LOV_CODE /LOV_VALUE /LOV_EXT_SYST_ID </index>
+                                            <defaultLabel>${./ROW_ID}</defaultLabel>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV TYPE</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_TYPE</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_TYPE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV CODE</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_VALUE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Value</osd:label>
+                                                    <osd:description>Value for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_ID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System ID</osd:label>
+                                                    <osd:description>External System ID available in System Registration Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_SYSTEM_REG</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_EXT_SYST_ID}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>List of value Description</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status for LOV</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="TRANSLATION_ID" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Translation ID</osd:label>
+                                                    <osd:description>Foreign Key to Translation Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_ANCILLARY_TRANSLATION</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_SOURCE_LOV_ANCILLARY_PRODUCTS7904BC44-6F6C-4691-A06C-6C20F470ABCB">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_CODE"/>
+                                    <xs:field xpath="LOV_VALUE"/>
+                                    <xs:field xpath="LOV_EXT_SYST_ID"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="TARGET_LOV_ANCILLARY_PRODUCTS" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>TARGET LOV ANCILLARY Products</osd:label>
+                                        <osd:description>Stores the Ancillary Code and Target</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_EXT_SYST_ID /LOV_CODE /LOV_VALUE </primaryKeys>
+                                            <index name="Ancillary Products Index">/ROW_ID /LOV_TYPE /LOV_CODE /LOV_VALUE /LOV_EXT_SYST_ID </index>
+                                            <defaultLabel>${./ROW_ID}</defaultLabel>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV TYPE</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_TYPE</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_TYPE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV CODE</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_VALUE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Value</osd:label>
+                                                    <osd:description>Value for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_ID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System ID</osd:label>
+                                                    <osd:description>External System ID available in System Registration Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_SYSTEM_REG</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_EXT_SYST_ID}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>List of value Description</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status for LOV</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="TRANSLATION_ID" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Translation ID</osd:label>
+                                                    <osd:description>Foreign Key to Translation Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_ANCILLARY_TRANSLATION</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_TARGET_LOV_ANCILLARY_PRODUCTS7904BC44-6F6C-4691-A06C-6C20F470ABCB">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_CODE"/>
+                                    <xs:field xpath="LOV_VALUE"/>
+                                    <xs:field xpath="LOV_EXT_SYST_ID"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="RDM_ANCILLARY_TRANSLATION" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>RDM_ANCILLARY_TRANSLATION</osd:label>
+                                        <osd:description>Translation Table for Source and Target Ancillary Mapping</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/ROW_ID </primaryKeys>
+                                            <defaultView>
+                                                <defaultViewForGroups>expanded</defaultViewForGroups>
+                                            </defaultView>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>2000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Source_Details" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Source Association</osd:label>
+                                                    <osd:description>Source Association</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/Cross_Reference_Data/SOURCE_LOV_ANCILLARY_PRODUCTS/TRANSLATION_ID</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                    <osd:defaultView>
+                                                        <hiddenInDataServices>true</hiddenInDataServices>
+                                                        <displayMode>inline</displayMode>
+                                                    </osd:defaultView>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="RDM_Association" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>RDM Association</osd:label>
+                                                    <osd:description>RDM Association</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/Cross_Reference_Data/RDM_LOV_ANCILLARY_PRODUCTS/TRANSLATION_ID</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                    <osd:defaultView>
+                                                        <hiddenInDataServices>true</hiddenInDataServices>
+                                                        <displayMode>inline</displayMode>
+                                                    </osd:defaultView>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="TARGET_ASSOCIATION" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Target Association</osd:label>
+                                                    <osd:description>Target Association</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/Cross_Reference_Data/TARGET_LOV_ANCILLARY_PRODUCTS/TRANSLATION_ID</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                    <osd:defaultView>
+                                                        <hiddenInDataServices>true</hiddenInDataServices>
+                                                        <displayMode>inline</displayMode>
+                                                    </osd:defaultView>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="RDM_LOV_ISO_COUNTRY" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ISO Country</osd:label>
+                                        <osd:description>Stores the ISO Country Code and Values</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_TYPE /LOV_ISO_ALPHA_2_CODE </primaryKeys>
+                                            <index name="Country_Index">/LOV_TYPE /LOV_ISO_ALPHA_2_CODE </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" minOccurs="1" maxOccurs="1" default="ISO_COUNTRY_CODE" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Type</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_ISO_ALPHA_2_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Alpha Code 2</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:length value="2"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_ISO_ALPHA_3_CODE" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Alpha Code 3</osd:label>
+                                                    <osd:description>Alpha 3 Code</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:length value="3"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_ISO_NUMERIC_CODE" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Numeric Code</osd:label>
+                                                    <osd:description>Numeric Code</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:totalDigits value="3"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_SHORT_NAME_EN" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Short Name</osd:label>
+                                                    <osd:description>Country Short Name</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_FULL_NAME_EN" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Full Name</osd:label>
+                                                    <osd:description>Country Full Name</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="250"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_SHORT_NAME_UPPER_CASE_EN" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Short Name - Upper Case</osd:label>
+                                                    <osd:description>Short Name in Upper Case</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>List of value Description</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_INDEPENDENT" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Independent</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_ID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System ID</osd:label>
+                                                    <osd:description>External System ID available in System Registration Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_SYSTEM_REG</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_EXT_SYST_NAME}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status of External LOV System</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_ORDER_BY" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>List of Value Order</osd:label>
+                                                    <osd:description>List of Value Order</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:totalDigits value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_ISO_COUNTRY729A6F73-67D5-4AB5-8D09-B629730259A9">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_TYPE"/>
+                                    <xs:field xpath="LOV_ISO_ALPHA_2_CODE"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="RDM_LOV_ISO_SUB_DIVISION" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sub Division</osd:label>
+                                        <osd:description>Stores the ISO State/Province Code and Values</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_TYPE /LOV_SUB_DIVISION_CODE </primaryKeys>
+                                            <index name="SD Index">/LOV_TYPE /LOV_SUB_DIVISION_CODE /LOV_SUB_DIVISION_COUNTRY </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" minOccurs="1" maxOccurs="1" default="ISO_SUB_DIVISION_CODE" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Type</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_SUB_DIVISION_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Code</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30">
+                                                        <xs:annotation>
+                                                            <xs:appinfo>
+                                                                <osd:validation>
+                                                                    <message xml:lang="en-US">Maximum Allowed Character is 100</message>
+                                                                </osd:validation>
+                                                            </xs:appinfo>
+                                                        </xs:annotation>
+                                                    </xs:maxLength>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_SUB_DIVISION_COUNTRY" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Country</osd:label>
+                                                    <osd:description>Sub Division Country</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_ISO_COUNTRY</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_SHORT_NAME_EN}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_SUB_DIVISION_NAME" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Sub Division Name</osd:label>
+                                                    <osd:description>Sub Division Name</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_SUB_DIVISION__LOCAL_VARIATION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Local Name</osd:label>
+                                                    <osd:description>Local Name</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>Description for List of Value</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="250"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_ID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System ID</osd:label>
+                                                    <osd:description>External System ID available in System Registration Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_SYSTEM_REG</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_EXT_SYST_NAME}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="1" maxOccurs="1" default="Active">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status of Country</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_ORDER_BY" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>List of Value Order</osd:label>
+                                                    <osd:description>List of Value Order</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:totalDigits value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_ISO_SUB_DIVISION7578F383-97AC-4836-86B8-D8001F41A085">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_TYPE"/>
+                                    <xs:field xpath="LOV_SUB_DIVISION_CODE"/>
+                                </xs:unique>
+                            </xs:element>
+                            <xs:element name="RDM_LOV_ISO_CURRENCY" minOccurs="0" maxOccurs="unbounded" osd:applyLastModification="ignored">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency</osd:label>
+                                        <osd:description>Stores the Currency Code and Values for ISO Countries</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/LOV_TYPE /LOV_CURRENCY_CODE /LOV_CURRENCY_COUNTRY </primaryKeys>
+                                            <index name="Currency Index">/LOV_TYPE /LOV_CURRENCY_CODE /LOV_CURRENCY_COUNTRY </index>
+                                        </osd:table>
+                                        <osd:defaultView/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ROW_ID" type="id" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                    <osd:description>Auto Incremented Identifier </osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement>
+                                                        <start>1000000</start>
+                                                    </osd:autoIncrement>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_TYPE" minOccurs="1" maxOccurs="1" default="ISO_CURRENCY_CODE" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Type</osd:label>
+                                                    <osd:description>List of Value Type</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_CURRENCY_CODE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Code</osd:label>
+                                                    <osd:description>Code for the LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30">
+                                                        <xs:annotation>
+                                                            <xs:appinfo>
+                                                                <osd:validation>
+                                                                    <message xml:lang="en-US">Maximum Allowed Character is 30</message>
+                                                                </osd:validation>
+                                                            </xs:appinfo>
+                                                        </xs:annotation>
+                                                    </xs:maxLength>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_CURRENCY_COUNTRY" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Country</osd:label>
+                                                    <osd:description>Country where the Currency is being Used</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_ISO_COUNTRY</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_SHORT_NAME_EN}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_CURRENCY_VALUE" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Currency Value</osd:label>
+                                                    <osd:description>Currency Value</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_CURRENCY_UNIT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Unit</osd:label>
+                                                    <osd:description>Unit</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:totalDigits value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_DESCRIPTION" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Description</osd:label>
+                                                    <osd:description>Description for List of Value</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="250"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_EXT_SYST_ID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV External System ID</osd:label>
+                                                    <osd:description>External System ID available in System Registration Table</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_SYSTEM_REG</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_EXT_SYST_NAME}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_STATUS" type="xs:string" minOccurs="1" maxOccurs="1" default="Active">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status</osd:label>
+                                                    <osd:description>Status of Country</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Cross_Reference_Data/RDM_LOV_STATUS</tablePath>
+                                                            <display>
+                                                                <pattern>${./LOV_VALUE}</pattern>
+                                                            </display>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_EFFECTIVE_DT" type="EFFECTIVE_DT" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV Effective Date</osd:label>
+                                                    <osd:description>Effective Start Date of LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LOV_END_DT" type="END_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>LOV End Date</osd:label>
+                                                    <osd:description>Effective End Date for LOV</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_BY" type="CREATED_BY" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created By User</osd:label>
+                                                    <osd:description>Created By User</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CREATED_DT" type="CREATED_DT" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="LAST_UPD_BY" type="LAST_UPD_BY" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated User</osd:label>
+                                                    <osd:description>Last Updated By User Details</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LAST_UPD_DT" type="LAST_UPD_DT" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Date/Time</osd:label>
+                                                    <osd:description>Last Updated Date and Time</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DB_LAST_UPD_SRC" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated Source</osd:label>
+                                                    <osd:description>Source Detail for the update</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="LOV_ORDER_BY" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>List of Value Order</osd:label>
+                                                    <osd:description>List of Value Order</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:totalDigits value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                                <xs:unique name="UniqueOn_root_Cross_Reference_Data_RDM_LOV_ISO_CURRENCY0F905B9E-32C8-458E-94C8-9017FC58389A">
+                                    <xs:selector xpath="."/>
+                                    <xs:field xpath="LOV_TYPE"/>
+                                    <xs:field xpath="LOV_CURRENCY_CODE"/>
+                                    <xs:field xpath="LOV_CURRENCY_COUNTRY"/>
+                                </xs:unique>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

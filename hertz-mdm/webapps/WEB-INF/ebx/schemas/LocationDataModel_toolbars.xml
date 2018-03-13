@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML generated from EBX5 DMA instance [reference=LocationDataModel] on Tue Feb 06 15:52:58 EST 2018 by user [admin].-->
+<root>
+    <toolbarNode>
+        <id>1</id>
+        <type>TOOLBAR</type>
+        <ordering>0</ordering>
+        <toolbar>
+            <name>CreateRecord</name>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Create</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                </localizedDocumentations>
+            </documentation>
+            <location>TABLE_VIEW_TOP</location>
+            <location>HIERARCHICAL_VIEW_TOP</location>
+            <location>ASSOCIATION_TOP</location>
+        </toolbar>
+    </toolbarNode>
+</root>

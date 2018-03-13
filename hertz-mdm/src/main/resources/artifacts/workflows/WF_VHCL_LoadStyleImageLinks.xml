@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+    <definition>
+        <process>
+            <moduleName>hertz-mdm</moduleName>
+            <quickLaunching>false</quickLaunching>
+            <synchronousLaunching>false</synchronousLaunching>
+        </process>
+        <pnode>
+            <idInProcess>-1</idInProcess>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Initial transition</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Transition initiale</label>
+                </localizedDocumentations>
+            </documentation>
+            <firstInProcess>false</firstInProcess>
+            <hiddenInGraphicalView>false</hiddenInGraphicalView>
+        </pnode>
+        <pnode>
+            <idInProcess>0</idInProcess>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Load Style Image Links</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                </localizedDocumentations>
+            </documentation>
+            <firstInProcess>true</firstInProcess>
+            <hiddenInGraphicalView>false</hiddenInGraphicalView>
+            <executionModeOfNextStep>asynchronous</executionModeOfNextStep>
+            <scriptTask>
+                <bean>
+                    <library>false</library>
+                    <osdClass>com.hertz.mdm.vehicle.scripttask.LoadStyleImageLinksScriptTask</osdClass>
+                </bean>
+            </scriptTask>
+        </pnode>
+        <plink>
+            <fromNode>-1</fromNode>
+            <toNode>0</toNode>
+            <role>other</role>
+        </plink>
+    </definition>
+</root>

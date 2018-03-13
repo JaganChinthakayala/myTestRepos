@@ -1,0 +1,265 @@
+
+
+Email Message = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data distributionList:[jeff.simon@orchestranetworks.com, jssimon@optonline.net]isInboxNotificationtrue
+
+Email method = sendEmail  emailSubject:Maintain Vehicle Reference Data  projectType:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Mon Sep 04 14:13:28 UTC 2017
+Table: /root/CarClass
+Record: test - Algeria emailBody:[jeff.simon@orchestranetworks.com, jssimon@optonline.net]
+
+Email Message = javax.mail.internet.MimeMessage@74899040  From:[Ljavax.mail.internet.InternetAddress;@d2bebb3a  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com, jssimon@optonline.net] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Mon Sep 04 14:13:28 UTC 2017
+Table: /root/CarClass
+Record: test - Algeria
+
+Email method = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data  emailAddress:  currentUserId:VHCLRde distributionList:[]
+
+Email Message = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data distributionList:[]
+
+Email Message = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data distributionList:[]isInboxNotificationfalse
+
+Email method = sendEmail  emailSubject:Maintain Vehicle Reference Data  projectType:This is an automated notification to inform you that the Maintain Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been MAINTAINED successfully on Mon Sep 04 14:13:37 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/CarClass
+Record: test - Algeria emailBody:null
+
+Email Message = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data distributionList:[jeff.simon@orchestranetworks.com, jssimon@optonline.net]isInboxNotificationtrue
+
+Email method = sendEmail  emailSubject:Maintain Vehicle Reference Data  projectType:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Mon Sep 04 14:57:11 UTC 2017
+Table: /root/CarClass
+Record: test - Algeria emailBody:[jeff.simon@orchestranetworks.com, jssimon@optonline.net]
+
+Email Message = javax.mail.internet.MimeMessage@1711cc30  From:[Ljavax.mail.internet.InternetAddress;@368ce2ca  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com, jssimon@optonline.net] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Mon Sep 04 14:57:11 UTC 2017
+Table: /root/CarClass
+Record: test - Algeria
+
+Email method = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data  emailAddress:jeff.simon@orchestranetworks.com  currentUserId:VHCLRde distributionList:[jeff.simon@orchestranetworks.com]
+
+Email Message = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data distributionList:[jeff.simon@orchestranetworks.com]
+
+Email Message = SendEMailMaintainVehicleReferenceSuccessNotificationScriptTask  domain:VHCL  projectType:Maintain Vehicle Reference Data distributionList:[jeff.simon@orchestranetworks.com]isInboxNotificationfalse
+
+Email method = sendEmail  emailSubject:Maintain Vehicle Reference Data  projectType:This is an automated notification to inform you that the Maintain Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been MAINTAINED successfully on Mon Sep 04 14:57:21 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/CarClass
+Record: test - Algeria emailBody:[jeff.simon@orchestranetworks.com]
+
+Email Message = javax.mail.internet.MimeMessage@df4a252a  From:[Ljavax.mail.internet.InternetAddress;@6b1ab898  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Maintain Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been MAINTAINED successfully on Mon Sep 04 14:57:21 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/CarClass
+Record: test - Algeria
+
+Email Message = javax.mail.internet.MimeMessage@cc3f9ad4  From:[Ljavax.mail.internet.InternetAddress;@30213d8f  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com, jssimon@optonline.net] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Mon Sep 04 15:20:03 UTC 2017
+Table: /root/CarClass
+Record: test - Algeria
+
+Email Message = javax.mail.internet.MimeMessage@91eebeb5  From:[Ljavax.mail.internet.InternetAddress;@84d01e05  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Maintain Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been MAINTAINED successfully on Mon Sep 04 15:21:33 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/CarClass
+Record: test - Algeria
+
+Email Message = javax.mail.internet.MimeMessage@b741241e  From:[Ljavax.mail.internet.InternetAddress;@f65ac760  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com, jssimon@optonline.net] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 12:46:29 UTC 2017
+Table: /root/SIPPData/SIPPCategory
+Record: A - Adrenaline
+
+Email Message = javax.mail.internet.MimeMessage@173bf37c  From:[Ljavax.mail.internet.InternetAddress;@7669c5f0  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 12:49:41 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/SIPPData/SIPPCategory
+Record: A - Adrenaline
+
+Email Message = javax.mail.internet.MimeMessage@396916b6  From:[Ljavax.mail.internet.InternetAddress;@8d0f564a  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com, jssimon@optonline.net] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 12:50:32 UTC 2017
+Table: /root/SIPPData/SIPPFuelAirConditioning
+Record: G - Test record
+
+Email Message = javax.mail.internet.MimeMessage@c94e0f54  From:[Ljavax.mail.internet.InternetAddress;@901fcf3e  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 12:51:06 UTC 2017
+Table: /root/SIPPData/SIPPFuelAirConditioning
+Record: G - Test record
+
+Email Message = javax.mail.internet.MimeMessage@b243c1ef  From:[Ljavax.mail.internet.InternetAddress;@51213b3c  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 12:51:49 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/SIPPData/SIPPFuelAirConditioning
+Record: G - Test record
+
+Email Message = javax.mail.internet.MimeMessage@fae22bba  From:[Ljavax.mail.internet.InternetAddress;@ef178347  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 12:51:50 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/SIPPData/SIPPFuelAirConditioning
+Record: G - Test record
+
+Email Message = javax.mail.internet.MimeMessage@d88a8b31  From:[Ljavax.mail.internet.InternetAddress;@a768a53a  Subject:Maintain SIPP Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com, jssimon@optonline.net] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 12:55:01 UTC 2017
+Table: /root/SIPPData/SIPPCategory
+Record: A - Adrenaline
+
+Email Message = javax.mail.internet.MimeMessage@5e9e2ff0  From:[Ljavax.mail.internet.InternetAddress;@a3a73bc8  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:24:42 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@9031cf80  From:[Ljavax.mail.internet.InternetAddress;@4fea5b27  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 15:29:54 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@6aa64484  From:[Ljavax.mail.internet.InternetAddress;@bd8a2cdb  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:36:51 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@d4374c19  From:[Ljavax.mail.internet.InternetAddress;@62dc5b89  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Maintain Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been MAINTAINED successfully on Tue Sep 05 15:38:28 UTC 2017.
+
+Approved By: VHCLRda
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@6ad759  From:[Ljavax.mail.internet.InternetAddress;@1c1f233d  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:39:38 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@67e5b346  From:[Ljavax.mail.internet.InternetAddress;@9123eddf  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:40:22 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@1807e73e  From:[Ljavax.mail.internet.InternetAddress;@7920388  Subject:Maintain Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Maintain Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde) on Tue Sep 05 15:41:31 UTC 2017.
+
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@781a8807  From:[Ljavax.mail.internet.InternetAddress;@eeb09e77  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:45:04 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@3927128c  From:[Ljavax.mail.internet.InternetAddress;@ca18850d  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:46:03 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@55fcafa8  From:[Ljavax.mail.internet.InternetAddress;@6677e633  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 15:47:12 UTC 2017.
+
+Cancelled By: VHCL Rde (VHCLRde)
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@904ffc08  From:[Ljavax.mail.internet.InternetAddress;@9639df0f  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 15:47:12 UTC 2017.
+
+Cancelled By: VHCL Rde (VHCLRde)
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@e39d79e1  From:[Ljavax.mail.internet.InternetAddress;@9e5289a3  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 15:48:16 UTC 2017
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@df73d97b  From:[Ljavax.mail.internet.InternetAddress;@86b178c3  Subject:Create Vehicle Reference Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CANCELLED by VHCL Rde (VHCLRde)  on Tue Sep 05 15:49:55 UTC 2017.
+
+Cancelled By: VHCL Rde (VHCLRde)
+Table: /root/CarClass
+Record: A2 - United States
+
+Email Message = javax.mail.internet.MimeMessage@38118e1d  From:[Ljavax.mail.internet.InternetAddress;@b34595b5  Subject:Create Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 16:03:08 UTC 2017
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@e511959a  From:[Ljavax.mail.internet.InternetAddress;@7f82b011  Subject:Create Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Create Vehicle Data in the VHCL domain initiated by VHCL De (VHCLDe) listed below has been CREATED successfully on Tue Sep 05 16:03:43 UTC 2017.
+
+Approved By: VHCLDa
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@2fab4e2e  From:[Ljavax.mail.internet.InternetAddress;@2fbfa26f  Subject:Maintain Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 16:05:01 UTC 2017
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@fa5ffb02  From:[Ljavax.mail.internet.InternetAddress;@b8bebae8  Subject:Maintain Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that the Maintain Vehicle Data in the VHCL domain initiated by VHCL De (VHCLDe) listed below has been MAINTAINED successfully on Tue Sep 05 16:08:27 UTC 2017.
+
+Approved By: VHCLDa
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@da637e9f  From:[Ljavax.mail.internet.InternetAddress;@9e3b8d9f  Subject:Maintain Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 16:09:11 UTC 2017
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@fc5e1d49  From:[Ljavax.mail.internet.InternetAddress;@1590b5ad  Subject:Maintain Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 16:15:28 UTC 2017
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@c9ad438d  From:[Ljavax.mail.internet.InternetAddress;@67a97ed4  Subject:Maintain Vehicle Data  Sender:jeff.simon@orchestranetworks.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Maintain Vehicle Data in the VHCL domain initiated by VHCL De (VHCLDe) listed below has been CANCELLED by VHCL De (VHCLDe) on Tue Sep 05 16:17:28 UTC 2017.
+
+Table: /root/Model
+Record: Hyundai - SUV
+
+Email Message = javax.mail.internet.MimeMessage@c1ce4955  From:[Ljavax.mail.internet.InternetAddress;@d9f70ed5  Subject:Create Vehicle Reference Data  Sender:MasterData-Notification-DoNotReply@hertz.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Tue Sep 05 17:31:33 UTC 2017
+Table: /root/CarClass
+Record: test2 - Afghanistan
+
+Email Message = javax.mail.internet.MimeMessage@60317444  From:[Ljavax.mail.internet.InternetAddress;@e3cba458  Subject:Create Vehicle Reference Data  Sender:MasterData-Notification-DoNotReply@hertz.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CREATED successfully on Tue Sep 05 17:31:55 UTC 2017.
+
+Table: /root/CarClass
+Record: test2 - Afghanistan
+
+Email Message = javax.mail.internet.MimeMessage@13339177  From:[Ljavax.mail.internet.InternetAddress;@fbec5031  Subject:Create Vehicle Reference Data  Sender:MasterData-Notification-DoNotReply@hertz.com  Recipient List:[lkim@datasourceconsulting.com, jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Wed Sep 06 20:54:49 UTC 2017
+Table: /root/CarClass
+Record: A3 - United States
+
+Email Message = javax.mail.internet.MimeMessage@308a1b51  From:[Ljavax.mail.internet.InternetAddress;@ddee9a6f  Subject:Create Vehicle Reference Data  Sender:MasterData-Notification-DoNotReply@hertz.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Wed Sep 06 21:16:47 UTC 2017
+Table: /root/CarClass
+Record: A3 - United States
+
+Email Message = javax.mail.internet.MimeMessage@df26a221  From:[Ljavax.mail.internet.InternetAddress;@e8236bf5  Subject:Create Vehicle Reference Data  Sender:MasterData-Notification-DoNotReply@hertz.com  Recipient List:[jeff.simon@orchestranetworks.com] Message:This is an automated notification to inform you that there is a User Task in your Master Data Management Inbox that requires your attention.
+
+Date: Thu Sep 07 04:11:18 UTC 2017
+Table: /root/CarClass
+Record: A3 - United States
+
+Email Message = javax.mail.internet.MimeMessage@ebd9e08d  From:[Ljavax.mail.internet.InternetAddress;@383cf0d  Subject:Create Vehicle Reference Data  Sender:MasterData-Notification-DoNotReply@hertz.com  Recipient List:[lkim@datasourceconsulting.com] Message:This is an automated notification to inform you that the Create Vehicle Reference Data in the VHCL domain initiated by VHCL Rde (VHCLRde) listed below has been CREATED successfully on Thu Sep 07 04:13:02 UTC 2017.
+
+Table: /root/CarClass
+Record: A3 - United States

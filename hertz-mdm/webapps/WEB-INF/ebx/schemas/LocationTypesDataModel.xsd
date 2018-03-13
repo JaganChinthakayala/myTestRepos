@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=LocationTypesDataModel] on Thu May 18 18:09:56 EDT 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="LocationProjectApprovalRole">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Location Project Approval Role</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RegionalVPApproval"/>
+            <xs:enumeration value="RegionFinanceApproval"/>
+            <xs:enumeration value="RealEstateApproval"/>
+            <xs:enumeration value="ConcessionsApproval"/>
+            <xs:enumeration value="FacilitiesConstructionApproval"/>
+            <xs:enumeration value="EnvironmentalAffairsApproval"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="LocationProjectType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Location Project Type</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="80"/>
+            <xs:enumeration value="Open Location"/>
+            <xs:enumeration value="Close Location"/>
+            <xs:enumeration value="Move Location"/>
+            <xs:enumeration value="Maintain Location"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PhoneNumber">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Phone Number</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

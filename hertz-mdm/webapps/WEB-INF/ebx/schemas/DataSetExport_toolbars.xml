@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML generated from EBX5 DMA instance [reference=DataSetExport] on Thu Feb 15 11:28:06 EST 2018 by user [admin].-->
+<root>
+    <toolbarNode>
+        <id>188</id>
+        <type>TOOLBAR</type>
+        <ordering>0</ordering>
+        <toolbar>
+            <name>Actions</name>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Actions</label>
+                    <description>List of Actions user can take</description>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                </localizedDocumentations>
+            </documentation>
+            <location>TABLE_VIEW_TOP</location>
+            <location>TABLE_VIEW_ROW</location>
+            <location>RECORD_VIEW_TOP</location>
+        </toolbar>
+    </toolbarNode>
+</root>

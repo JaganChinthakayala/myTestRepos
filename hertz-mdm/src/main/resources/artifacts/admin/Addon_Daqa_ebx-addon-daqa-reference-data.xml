@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+    <ReferenceData>
+        <RecordSelection>
+            <name>Best score</name>
+            <description>Record with the best score after the pivot record</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>Longest</name>
+            <description>Record with most information (size). All fields (string data type) are taken into account except Data Quality (DQ) metadata. The length of a multi-value field is the length of longest element in the list.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>Most complete</name>
+            <description>The record with fewest empty fields.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>Most complete and longest</name>
+            <description>Record with the fewest empty fields and with the most information(size). All fields are taken into account except DQ metadata. Most complete takes priority over the longest.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>Most recently acquired</name>
+            <description>The record with the latest timestamp managed through the DQ metadata tab.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>Most trusted source</name>
+            <description>The record with most trusted source.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>New update</name>
+            <description>The record created or modified.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <RecordSelection>
+            <name>Was golden</name>
+            <description>The record is selected amongst 'Was golden' records and current 'Golden'. If many records with the 'Golden' or 'Was golden' identifier exist, the 'Most recently acquired' record is used.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </RecordSelection>
+        <MatchingAlgorithm>
+            <name>Chinese</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>DoubleMetaPhone</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>DoubleMetaPhoneLevenshtein</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>Exact</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>FullText</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>FuzzyFullText</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>JaroWinkler</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>Levenshtein</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>NGram</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>SearchDate</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>SearchNumber</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <MatchingAlgorithm>
+            <name>Soundex</name>
+            <isPercentageScore>true</isPercentageScore>
+            <isPrebuilt>true</isPrebuilt>
+        </MatchingAlgorithm>
+        <SurvivorshipFunction>
+            <name>Best score</name>
+            <description>The field value used is that of the record with the best score amongst all related suspects.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>Longest</name>
+            <description>This field value is taken from the record with the biggest field value size (string). The length of a multi-value field is counted as the number of elements in the list.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>Max</name>
+            <description>The field value used is the maximum value amongst all related suspects.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>Min</name>
+            <description>The field value used is the minimum value amongst all related suspects.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>Most frequent</name>
+            <description>The field value used is the value found most frequently amongst all related suspects.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>Most recently acquired</name>
+            <description>The field value is taken from the last timestamps record.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>Most trusted source</name>
+            <description>The field value is taken from the record with the best trusted source amongst all related clusters. If there are two sources with the same priority, the add-on will determine the most trusted based on latest timestamp. If this field is not declared in the 'Field trusted source' table, then the merge for this field is not executed.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+        <SurvivorshipFunction>
+            <name>No merge</name>
+            <description>The field value is not merged.</description>
+            <isPrebuilt>true</isPrebuilt>
+        </SurvivorshipFunction>
+    </ReferenceData>
+</root>

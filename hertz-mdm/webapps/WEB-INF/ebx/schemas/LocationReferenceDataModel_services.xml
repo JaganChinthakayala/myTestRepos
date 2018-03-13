@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=LocationReferenceDataModel] on Tue Feb 06 15:56:19 EST 2018 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="DisplayFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Display Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/DisplayValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateLocationReferenceWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Create Location Reference Data</label>
+        </documentation>
+        <resourcePath>/services/location/LaunchCreateLocationReferenceRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/ContactType</path>
+                <path>/root/HierarchyNodeType</path>
+                <path>/root/Indicator</path>
+                <path>/root/IndicatorCategory</path>
+                <path>/root/ServiceHoursType</path>
+                <path>/root/LocationRelationshipType</path>
+                <path>/root/AreaType</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainLocationReferenceWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Location Reference Data</label>
+        </documentation>
+        <resourcePath>/services/location/LaunchMaintainLocationReferenceRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/ContactType{1}</path>
+                <path>/root/HierarchyNodeType{1}</path>
+                <path>/root/Indicator{1}</path>
+                <path>/root/IndicatorCategory{1}</path>
+                <path>/root/ServiceHoursType{1}</path>
+                <path>/root/LocationRelationshipType{1}</path>
+                <path>/root/AreaType{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

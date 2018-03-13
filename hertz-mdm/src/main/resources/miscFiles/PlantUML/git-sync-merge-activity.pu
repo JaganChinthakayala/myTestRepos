@@ -1,0 +1,42 @@
+@startuml
+skinparam monochrome true
+
+start
+
+:prepare for merge|
+
+:git fetch;
+note: NOT pull!
+
+:git merge origin/master;
+
+if (conflicts?) then (yes)
+  :resolve and commit|
+  note: detailed subprocess TBD
+else (no)
+endif
+
+:backup database ""respository.h2.db"";
+
+:start EBX;
+
+:import dev-artifacts; replace;
+note: never import "Environment Copy" for local dev
+
+:import models;
+floating note: or restart EBX server
+
+:publish Workflow Models;
+note
+Currently 4 steps to **Publish** all the workflows:
+BPTY - Create Business Party Data ("Select all workflow models")
+LOCN - Close Location
+LOCN - Execute New Area and MEID
+LOCN - Open Location
+end note
+
+:OPTIONAL
+export dev-artifacts and check for differences;
+
+stop
+@enduml

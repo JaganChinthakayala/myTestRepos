@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=VehicleDataModel] on Mon Nov 20 21:29:15 CST 2017 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="AssetManualOverrideService">
+        <documentation xml:lang="en-US">
+            <label>Data Steward Manual Override Service</label>
+        </documentation>
+        <resourcePath>/services/vehicle/Matching/ManualOverrideService.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/VehicleData/VehicleAsset{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="DisplayFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Display Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/DisplayValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateVehicleWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Create Vehicle Data</label>
+            <description>Create a new record for this table.</description>
+        </documentation>
+        <resourcePath>/services/vehicle/LaunchCreateVehicleRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Vehicle</path>
+                <path>/root/Model</path>
+                <path>/root/VehicleData/VehicleAsset</path>
+                <path>/root/VinException</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainVehicleWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Vehicle Data</label>
+            <description>Maintain a record in this table.</description>
+        </documentation>
+        <resourcePath>/services/vehicle/LaunchMaintainVehicleRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Vehicle{1}</path>
+                <path>/root/Model{1}</path>
+                <path>/root/VehicleData/VehicleAsset{1}</path>
+                <path>/root/VinException{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="ManualOverrideService">
+        <documentation xml:lang="en-US">
+            <label>Data Steward Manual Override Service</label>
+        </documentation>
+        <resourcePath>/services/vehicle/Matching/ManualOverrideService.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Vehicle{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="MatchAtOnceUnMatched">
+        <documentation xml:lang="en-US">
+            <label>Match At Once UnMatched</label>
+        </documentation>
+        <resourcePath>/services/vehicle/Matching/MatchAtOnceUnMatched.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Vehicle</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

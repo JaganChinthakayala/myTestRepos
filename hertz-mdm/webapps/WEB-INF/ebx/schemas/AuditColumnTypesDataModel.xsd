@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=BasicTypesDataModel] on Tue Feb 14 11:58:32 EST 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="id">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Auto Generated Sequential ID</osd:label>
+            </xs:documentation>
+            <xs:appinfo>
+            	<osd:autoIncrement/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:int">
+        </xs:restriction>
+    </xs:simpleType>
+ <xs:simpleType name="CREATED_BY">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Created By User</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+        	<xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+ 	<xs:simpleType name="CREATED_DT">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Created By Date/Time</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+	 <xs:simpleType name="LAST_UPD_BY">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Last Updated By User</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+        <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="LAST_UPD_DT">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Last Updated Date/Time</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+	<xs:simpleType name="EFFECTIVE_DT">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Effective Start Date</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:date">
+        <xs:minInclusive value="1900-01-01">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <osd:validation>
+                            <message>Year must be 4 digits and no earlier than 1/1/1900</message>
+                        </osd:validation>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="END_DT">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Effective End Date</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:date">
+        <xs:minInclusive value="1900-01-01">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <osd:validation>
+                            <message>Year must be 4 digits and no earlier than 1/1/1900</message>
+                        </osd:validation>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>   
+ </xs:schema>

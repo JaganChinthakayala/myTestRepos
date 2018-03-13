@@ -1,0 +1,2112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=ChromeNVDDataModel] on Tue Oct 18 10:06:46 EDT 2016 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BodyStyles" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Body Styles</osd:label>
+                                <osd:description>This table contains body style classifications for each Chrome Style. A single Chrome Style can belong to one or more body styles.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /bodyStyle </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="bodyStyle" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Body Style</osd:label>
+                                        <osd:description>Standardized (not free-form; limited number of values) textual description of body style.&#13;
+Example: Regular Cab Pickup</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isPrimary" type="xs:boolean" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Primary</osd:label>
+                                        <osd:description>Y (Yes) or N (No). Indicates whether this body style is the primary body style for the vehicle. Since some values belong to more than one body style, the record marked as primary should be used when only one is needed.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Categories" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Categories</osd:label>
+                                <osd:description>Chrome Categories are generalized feature  ags, which allow standard and optional equipment to be handled generically across manufacturers. For example, the option “Premium two-tone leather upholstery” is additionally  agged as belonging to the category 1078: Seat Trim-Leather. See The Supplemental Data Reference document for a full list of Chrome categories.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/categoryID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="categoryID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category ID</osd:label>
+                                        <osd:description>Primary key. Allows for the comparison of similar equipment on two different vehicles.&#13;
+Example: 1051</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="category" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category</osd:label>
+                                        <osd:description>Category Description&#13;
+Example: Engine-6 Cyl-V6</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="categoryTypeFilter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category Type Filter</osd:label>
+                                        <osd:description>This value indicates categories where only one of the categories will be present on the vehicle. When two categories have the same type filter text (e.g. “Engine”), only one of the categories with this  lter will describe a vehicle at a given time. For example, the vehicle will have a 4 cylinder engine or a 6 cylinder engine, but not both.&#13;
+Example: Engine</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="categoryHeaderID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category Header ID</osd:label>
+                                        <osd:description>Foreign key for the CategoryHeaders table.&#13;
+Example: 13</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/CategoryHeaders</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="userFriendlyName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>User Friendly Name</osd:label>
+                                        <osd:description>A more user friendly description of the Category.&#13;
+Example: V6 Cylinder Engine</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CategoryHeaders" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Category Headers</osd:label>
+                                <osd:description>This table contains header information that might be useful for grouping Categories together for display purposes (e.g. a side-by- side comparison feature).</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/categoryHeaderID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="categoryHeaderID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category Header ID</osd:label>
+                                        <osd:description>Primary Key&#13;
+Example: 13</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="categoryHeader" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category Header</osd:label>
+                                        <osd:description>Category Header&#13;
+Example: Engine</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Sequence" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Suggested order for presentation.&#13;
+Example: 2000</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CITypes" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Customer Information Types</osd:label>
+                                <osd:description>This table contains a description of the consumer information (CI) types for each Type ID.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/typeID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="typeID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Type ID</osd:label>
+                                        <osd:description>Primary key used for linking to the ConsInfo table and the NormCILabels table.&#13;
+Example: 4</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Type</osd:label>
+                                        <osd:description>Consumer information type&#13;
+Example: News - Crash Test Results</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Colors" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Colors</osd:label>
+                                <osd:description>This table contains the exterior and interior color information linked by Style ID. The combination of Style ID + Ext1Code + Ext2Code + IntCode + Condition can be used to identify a unique record.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /ext1Code /intCode /condition </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for the Styles table.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext1Code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext1 Code</osd:label>
+                                        <osd:description>This  field is a Manufacturer- defined or Chrome-defined  eld. Only use if Ext1ManCode is blank.&#13;
+Example: 4</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext2Code" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext2 Code</osd:label>
+                                        <osd:description>This field is a Manufacturer- defined or Chrome-defined  field. Only use if Ext2ManCode is blank.&#13;
+Example: 0P</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="intCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Int Code</osd:label>
+                                        <osd:description>This field is a Manufacturer- defined or Chrome-defined  field. Only use if IntManCode is blank.&#13;
+Example: 56</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext1ManCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext1 Man Code</osd:label>
+                                        <osd:description>Manufacturer’s Exterior 1 Color Code if not blank.&#13;
+Example: SZ</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext2ManCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext2 Man Code</osd:label>
+                                        <osd:description>Manufacturer’s Exterior 2 Color Code if not blank.&#13;
+Example: UX</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="intManCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Int Man Code</osd:label>
+                                        <osd:description>Manufacturer’s Interior Color Code if not blank.&#13;
+Example: MS</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="orderCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Order Code</osd:label>
+                                        <osd:description>Used for partial codes &amp; Chrysler SixCodes.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="asTwoTone" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>As Two Tone</osd:label>
+                                        <osd:description>Y (Yes) if the paint scheme is two-tone. Otherwise N (No).&#13;
+Example: N</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext1Desc" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext1 Desc</osd:label>
+                                        <osd:description>Color description of Exterior Color 1.&#13;
+Example: Blue Flame Metalic</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext2Desc" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext2 Desc</osd:label>
+                                        <osd:description>Color description of Exterior Color 2.&#13;
+Example: Ingot Silver Metallic</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="intDesc" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Int Description</osd:label>
+                                        <osd:description>Color description of Interior Color.&#13;
+Example: Steel Gray</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="condition" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Condition</osd:label>
+                                        <osd:description>Condition in which current color combination is available. May be null (no condition) or a logical expression consisting of Option Codes and Boolean operators.&#13;
+Example: SZ&amp;MS&amp;UX-S</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="genericExtColor" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Generic Ext Color</osd:label>
+                                        <osd:description>A text description of the generic color assigned to the primary exterior color. Possible values include: Black, White, Red, Yellow, Blue, Green, Silver, Gold, Brown, Orange, Purple, Tan, Maroon, Teal, Gray, Copper, and Non-Color.&#13;
+Example: Blue</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="genericExt2Color" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Generic Ext2 Color</osd:label>
+                                        <osd:description>A text description of the generic color assigned to the secondary exterior color.&#13;
+Example: Silver</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext1RGBHex" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext1 RGB Hex</osd:label>
+                                        <osd:description>RGB Hex representation of the primary exterior color. Values not available prior to 2004 model year.&#13;
+Example: 0073C6</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext2RGBHex" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext2 RGB Hex</osd:label>
+                                        <osd:description>RGB Hex representation of the secondary exterior color. Values not available prior to 2004 model year.&#13;
+Example: 717171</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext1MfrFullCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext1 Mfr Full Code</osd:label>
+                                        <osd:description>If not null, this is the manufacturer’s complete primary exterior color code.&#13;
+Example: SZ</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ext2MfrFullCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext2 Mfr Full Code</osd:label>
+                                        <osd:description>If not null, this is the manufacturer’s complete secondary exterior color code.&#13;
+Example: UX</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ConsInfo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Consumer Information</osd:label>
+                                <osd:description>This table contains consumer information linked by Style ID. The consumer information is categorized by type (Type ID linked to CITypes table).</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /typeID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for linking to the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="typeID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Type ID</osd:label>
+                                        <osd:description>Foreign key for linking to the CITypes table.&#13;
+Example: 13</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/CITypes</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="text" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Text</osd:label>
+                                        <osd:description>Consumer information text. May contain embedded new line characters (cr/lf).&#13;
+Example: Optional Telematics: SYNC&#13;
+Features: Hands-free Calling; Turn-by-Turn Directions; 911 Assist; Music Search; Vehicle Health Report; Personalized Daily Info; Business Search; Traffic Alerts; Audible Text Messages... [see data sample for the complete contents of this  field.]</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Divisions" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Divisions</osd:label>
+                                <osd:description>This table contains list of divisions and their manufacturer (Manufacturer ID) information. An example of a Chrome Division is “Chevrolet,” commonly referred to as the vehicle “Make” or “Brand.”</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/divisionID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="divisionID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Division ID</osd:label>
+                                        <osd:description>Primary key assigned to a division.&#13;
+Example: 13</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="manufacturerID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Manufacturer ID</osd:label>
+                                        <osd:description>Foreign key for the Manufacturer’s table. Unique ID assigned to a manufacturer.&#13;
+Example: 9</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Manufacturers</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="divisionName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Division Name</osd:label>
+                                        <osd:description>Division name&#13;
+Example: Ford</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="JPGs" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>JPGs</osd:label>
+                                <osd:description>This table allows cross-reference of the vehicle pictures (in JPEG format) to a Style ID in the Styles table. The table is found in the jpg_v3_[year].zip  file available separately from nvd_v3_[year].zip.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /JPGName </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign Key from the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="JPGName" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>JPG Name</osd:label>
+                                        <osd:description>The file name consists of a unique identifier for the vehicle.&#13;
+Example: 13969.jpg</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="subdivisionName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivision Name</osd:label>
+                                        <osd:description>Vehicle Subdivision Description&#13;
+Example: Ford Pickups</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="modelName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model Name</osd:label>
+                                        <osd:description>Vehicle Model Description&#13;
+Example F-150</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="styleName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style Name</osd:label>
+                                        <osd:description>Vehicle Style Description&#13;
+Example: 4WD Reg Cab 145” XLT</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="year" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Year</osd:label>
+                                        <osd:description>Model Year of the Vehicle&#13;
+Example: 2011</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Manufacturers" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Manufacturers</osd:label>
+                                <osd:description>This table contains the manufacturer information and should not be confused with Division. The Division “Chevrolet” is associated with the Manufacturer “General Motors.”</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/manufacturerID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="manufacturerID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Manufacturer ID</osd:label>
+                                        <osd:description>Primary key assigned to a manufacturer. Used for linking from the Divisions table.&#13;
+Example: 9</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="manufacturerName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Manufacturer Name</osd:label>
+                                        <osd:description>Manufacturer name&#13;
+Example: Ford</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MktClass" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Market Class</osd:label>
+                                <osd:description>This table contains the market class of the vehicle as specified by the EPA (Environmental Protection Agency). This table is linked to the Styles table to obtain market class description. See The Supplemental Data Reference document for a full list of all EPA market classes.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/mktClassID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="mktClassID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Market Class ID</osd:label>
+                                        <osd:description>Primary key&#13;
+Example: 4</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="marketClass" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Market Class</osd:label>
+                                        <osd:description>Market class description&#13;
+Example: 4WD Standard Pickup Trucks</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Models" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Models</osd:label>
+                                <osd:description>This table contains vehicle model-related information.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/modelID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="modelID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model ID</osd:label>
+                                        <osd:description>Primary key. Model ID does not change once it is assigned to a vehicle.&#13;
+Example: 20992</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="HistModelID" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>History Model ID</osd:label>
+                                        <osd:description>Historical identifier which is provided to assist with transition and integration of legacy products.&#13;
+NOTE: Vehicles which do not have a Historical Style ID will have a null value in this field (includes exotic vehicles and some other vehicle divisions not covered prior to 2003).&#13;
+Hist Model ID does not change once it is assigned to a vehicle. Hist Model ID consists of eight digits:&#13;
+Position Meaning&#13;
+1-4 Year&#13;
+5-6 Subdivision ID, assigned by Chrome.&#13;
+The Subdivision ID is not the same as Manufacturer ID or Division ID. There may be multiple subdivisions (also referred to as makes) for a division (for example, Ford Cars, Ford Pickups).&#13;
+7-8 Model ID (unique for model within a make)&#13;
+Example: 20111803</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="modelYear" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model Year</osd:label>
+                                        <osd:description>Model Year&#13;
+Example: 2011</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="divisionID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Division ID</osd:label>
+                                        <osd:description>Foreign key for the Divisions table. Unique ID assigned to a division (for example, Ford or Chevrolet).&#13;
+Example: 13</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Divisions</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="subdivisionID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivision ID</osd:label>
+                                        <osd:description>Foreign key for the Subdivisions table. Unique identifier assigned to a vehicle subdivision (for example, Ford Cars).&#13;
+Example: 6729</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/subdivisions</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="modelName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model Name</osd:label>
+                                        <osd:description>Model name&#13;
+Example: F-150</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Date</osd:label>
+                                        <osd:description>Effective date of later of Price Sheet, Order Guide, or major bulletin revising either.&#13;
+Example: 8/27/2010</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="modelComment" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model Comment</osd:label>
+                                        <osd:description>Generic comment that applies to all styles within a model.&#13;
+Example: ORDERING EFF 09/03/2010 - PLC 115</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="availability" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Availability</osd:label>
+                                        <osd:description>This contains an indicator  field of the  fleet or retail only availability of a style. The valid values are:&#13;
+F = Fleet Only&#13;
+R = Retail Only&#13;
+P = Police Only&#13;
+“ ” = No restriction (i.e. available to all buyers)</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NormCILabels" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Normalized Customer Information Labels</osd:label>
+                                <osd:description>This table contains the label names for the various components that comprise the consumer information associated to the style. The TypeID is used to tie into the CITypes table. Please see The Supplemental Data Reference document for Reference Values.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/labelID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="labelID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Label ID</osd:label>
+                                        <osd:description>Primary key used for linking to the NormConsInfo table.&#13;
+Example: 34</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="label" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Label</osd:label>
+                                        <osd:description>The name of the normalized consumer information label.&#13;
+Example: Basic Miles/km</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="typeID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Type ID</osd:label>
+                                        <osd:description>Foreign key for linking to the CITypes table.&#13;
+Example: 2</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/CITypes</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="labelSequence" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Label Sequence</osd:label>
+                                        <osd:description>The order in which the label should be displayed within a CIType instance.&#13;
+Example: 3</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NormConsInfo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Normalized Consumer Information</osd:label>
+                                <osd:description>This table contains the values of the normalized consumer information for a style, as well as the display order information.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /labelID /value /group </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for linking to the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="labelID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Label ID</osd:label>
+                                        <osd:description>Foreign key for linking to the NormCILabels table.&#13;
+Example: 34</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/NormCILabels</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="value" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Value</osd:label>
+                                        <osd:description>The consumer information value for a specific NormCILabel.&#13;
+Example: 36,000</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="qualifier" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Qualifier</osd:label>
+                                        <osd:description>The specific conditions to which the label’s value applies.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="qualifierSequence" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Qualifier Sequence</osd:label>
+                                        <osd:description>The order in which the label’s qualifier should be displayed within a LabelID.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="group" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Group</osd:label>
+                                        <osd:description>Defines which labels apply to which CIType instance if there are multiple CIType instances for a given style.&#13;
+Example: 113809</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="OptHeaders" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Option Headers</osd:label>
+                                <osd:description>This table contains the Option equipment header information (linked by Header ID from the Options table). Option Headers separate available options into logical groups.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/headerID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="headerID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Header ID</osd:label>
+                                        <osd:description>Primary Key&#13;
+Example: 1160</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="header" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Header</osd:label>
+                                        <osd:description>Option Header.&#13;
+Example: ENGINE</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Options" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Options</osd:label>
+                                <osd:description>This table stores lists of optional equipment available for each style of vehicle (linked by Style ID). It also contains information (such as OptionKind ID and Category List) to validate con guration of an orderable vehicle.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /optionCode </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="headerID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Header ID</osd:label>
+                                        <osd:description>Foreign key for the OptHeaders table.&#13;
+Example: 1160</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/OptHeaders</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Provides a logical display order for options. May not be consecutive (gaps may exist in numbering).&#13;
+Example: 10</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="optionCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Option Code</osd:label>
+                                        <osd:description>Alphanumeric Option Code. Unique within a Style. Used in combination with Style ID to identify a unique style-option combination.&#13;
+Example: 99M</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="optionDesc" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Option Description</osd:label>
+                                        <osd:description>Complete description of the option.&#13;
+Example: 3.7L V6 FFV ENGINE (STD)</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="optionKindID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Option Kind ID</osd:label>
+                                        <osd:description>Foreign key for the OptKinds table.&#13;
+Example: 6</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/OptKinds</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="categoryList" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category List</osd:label>
+                                        <osd:description>Used for comparing standard equipment for two vehicles. Composed of the 4-digit Category ID plus a 1-character Flag (C, T, P, D). See The Supplemental Data Reference document for a full list of Chrome categories.&#13;
+C = Clean (adds the category to the vehicle)&#13;
+T= TBD &#13;
+P = Package (Item is part of a package and therefore can be overwritten by other options)&#13;
+D = Delete (Category deleted from the vehicle)&#13;
+Example: 1051C1213C</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="availability" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Availability</osd:label>
+                                        <osd:description>This contains an indicator  field of the  fleet or retail only availability of a style. The valid values are:&#13;
+F = Fleet Only  &#13;
+R = Retail Only&#13;
+P = Police Only&#13;
+“ ” = No restriction (i.e. available to all buyers)</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="pon" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Primary Option Name</osd:label>
+                                        <osd:description>This is the primary option name. All upper case.&#13;
+Example: 3.7L V6 FFV ENGINE</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="extDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Ext Description</osd:label>
+                                        <osd:description>This is a description of the contents of the option. It is parsed from the Option Desc, and follows the PON. In the case of an option package, this description describes the package contents.&#13;
+Example: (STD)</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="supportedLogic" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Supported Logic</osd:label>
+                                        <osd:description>This is a written descriptionof the order logic rules. It is also parsed from the Option Desc, and follows the PON and ExtDescription.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="unsupported" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Unsupported</osd:label>
+                                        <osd:description>This is a written description of the non-enforced order logic rules. Also parsed from the Option Desc.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="logic" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Logic</osd:label>
+                                        <osd:description>This is a written description of the non-enforced order logic rules. Also parsed from the Option Desc.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="OptKinds" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Option Kinds</osd:label>
+                                <osd:description>This table contains a grouping of options used to confirm that the user has selected at least one option from each of the OptKinds specified in StyleCVC list  field in the Styles table.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/optionKindID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="optionKindID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Option Kind ID</osd:label>
+                                        <osd:description>Primary key&#13;
+Example: 6</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="optionKind" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Option Kind</osd:label>
+                                        <osd:description>Option Kind Description&#13;
+Example: Engine</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Prices" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Prices</osd:label>
+                                <osd:description>Pricing for individual options is provided here, linked to the Options  le by the Style ID and Option Code. Note that a single option may have multiple prices, since an option’s price may depend on the state of the other options on the vehicle. For example, a CD player may be selectable by itself (a la carte, price associated) or within a package (the package has an associated cost, but the CD player is a zero-price option when the package is selected).&#13;
+To handle these circumstances, Chrome provides the Condition  eld (Boolean expression referencing related option codes) and the PriceRuleDesc  eld, a readable version of the Condition rule, for display on a screen or report.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /sequence /optionCode </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key to the Styles table.&#13;
+Example: 19</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Provides the order for processing multiple prices for a single option, when looking for an applicable Condition expression.&#13;
+Example: 115</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="optionCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Option Code</osd:label>
+                                        <osd:description>Alpha-numeric code.&#13;
+Example: 66D</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="priceRuleDesc" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Price Rule Description</osd:label>
+                                        <osd:description>Text description of Condition.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="condition" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Condition</osd:label>
+                                        <osd:description>Condition in which Price applies. May be null (default price) or a logical expression consisting of Option Codes and Boolean operators.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="invoice" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Invoice</osd:label>
+                                        <osd:description>Invoice Price for Option in current Condition.&#13;
+Example: 1556</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="msrp" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>MSRP</osd:label>
+                                        <osd:description>MSRP Price for Option in current Condition.&#13;
+1875</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="priceState" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Price State</osd:label>
+                                        <osd:description>Indicates whether the price is the actual price, unknown or estimated based on information from last model year or other styles within the model. Valid values are “Confirmed”, “Unknown” and “Estimated”.&#13;
+Example: Confirmed</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Standards" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Standards</osd:label>
+                                <osd:description>The Standards table stores a list of standard equipment for each style of vehicle (linked by Style ID).</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /sequence </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="headerID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Header ID</osd:label>
+                                        <osd:description>Foreign key for the StdHeaders table&#13;
+Example: 1236</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/StdHeaders</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Provides a logical order to display. Restarts with each new Style; may not be consecutive.&#13;
+Used in combination with Style ID to make it a unique record. This field also indicates the order in which standard equipment is listed.&#13;
+Example: 1</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="standard" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Standard</osd:label>
+                                        <osd:description>Standard description; may be duplicated within a style&#13;
+Example: 3.7L V6 FFV engine</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="categoryList" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category List</osd:label>
+                                        <osd:description>Used for comparing standard equipment for two vehicles. Composed of the 4-digit Category ID plus a 1-character Flag (C, T, P, D).&#13;
+C = Clean (adds the category to the vehicle)&#13;
+T = TBD&#13;
+P = Package (Item is part of a package and therefore can be overwritten by other options)&#13;
+D = Delete (Category deleted from the vehicle)&#13;
+Examples: 1051C1213C</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="StdHeaders" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Standards Headers</osd:label>
+                                <osd:description>This table contains the Standard equipment header information (linked by Header ID from the Standards table). Standard Headers are useful for separating Standards into logical groups for improved readability.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/headerID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="headerID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Header ID</osd:label>
+                                        <osd:description>Primary key&#13;
+Example: 1236</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="header" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Header</osd:label>
+                                        <osd:description>Standard Header Type&#13;
+Example: MECHANICAL</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="StyleCats" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Style Categories</osd:label>
+                                <osd:description>This table provides a cross reference between Optional and Standard Equipment data, and the generalized Chrome Category  ags.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /categoryID /sequence /featureType /state </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="categoryID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Category ID</osd:label>
+                                        <osd:description>Foreign key for the Categories table. The Chrome Category&#13;
+ID of the generic feature being described. See the Supplemental Data Reference document for a full list of Chrome categories.&#13;
+Example: 1051</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Categories</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="featureType" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Feature Type</osd:label>
+                                        <osd:description>Identifies whether this category applies to Standard (S) or Optional (O) equipment on the vehicle.&#13;
+Example: S</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>The Sequence number assigned to the associated Option or Standard record. This does not imply the order in which the categories ought to be displayed on a screen, but rather serves to link this Style Categories record to the associated Standard or Option record.&#13;
+Example: 1</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="state" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>State</osd:label>
+                                        <osd:description>Used for comparing standard equipment for two vehicles. Composed of the 4-digit Category ID plus a 1-character Flag (C, T, P, D).&#13;
+C = Clean (adds the category to the vehicle).&#13;
+P = Package (item is part of a package and therefore can be overwritten by other options).&#13;
+D = Delete (category deleted from the vehicle).&#13;
+Example: C</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Styles" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Styles</osd:label>
+                                <osd:description>This table contains Chrome’s style information and ties to other tables in the New Vehicle dataset. Additional information about the particular vehicle style is obtained by linking the Style ID to other tables in this dataset (refer to the New Vehicle Data Model shown on the previous page).</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Primary key. Style ID does not change once it is assigned to a vehicle.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="histStyleID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Historical Style ID</osd:label>
+                                        <osd:description>Historical identifier which is provided to assist with transition and integration of legacy products.&#13;
+NOTE: Vehicles which do not have a Historical Style ID will have a null value in this fi eld (includes exotic vehicles and some other vehicle divisions not covered prior to 2003).&#13;
+It consists of 10 digits composed of the following:&#13;
+Position Meaning&#13;
+1-4 Year&#13;
+5-6 Subdivision ID (assigned by&#13;
+Chrome). The Subdivision ID is&#13;
+not the same as Manufacturer ID or Division ID. There may be multiple subdivisions (also referred to as makes) for a division (e.g., Ford Cars, Ford Pickups).&#13;
+7-8 Model ID (unique for model within a make)&#13;
+9-10 Style ID (unique for the year, make, &amp;&#13;
+model)&#13;
+Example: 2011180323</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="modelID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model ID</osd:label>
+                                        <osd:description>Foreign key to the Models table. Model ID does not change once it is assigned to a vehicle.&#13;
+Example: 20992</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Models</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="modelYear" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model Year</osd:label>
+                                        <osd:description>Model year.&#13;
+Example: 2011</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Controls the display order of styles within a model.&#13;
+Example: 32</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="styleCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style Code</osd:label>
+                                        <osd:description>Chrome Manufacturer Order Code is unique within a model, and is based loosely on the Manufacturer’s Order Code, but may be modified by Chrome.&#13;
+Example: F1E-B3</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="fullStyleCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Full Style Code</osd:label>
+                                        <osd:description>Correct, complete, unmodified Manufacturer’s Style Code.&#13;
+Example: F1E</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="styleName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style Name</osd:label>
+                                        <osd:description>Vehicle Description&#13;
+Example: 4WD Reg Cab 145" XLT</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="trueBasePrice" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>True Base Price</osd:label>
+                                        <osd:description>Y (Yes) if vehicle can be purchased for Base Price +&#13;
+Destination Charge. otherwise, N (No).&#13;
+Example: Y</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="invoice" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Invoice</osd:label>
+                                        <osd:description>Base Invoice Price &#13;
+Example: 27624.00</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="msrp" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>MSRP</osd:label>
+                                        <osd:description>Base MSRP Price &#13;
+Example: 30310.00</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="destination" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Destination</osd:label>
+                                        <osd:description>Destination Charge &#13;
+Example: 975.00</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="styleCVCList" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style CVC List</osd:label>
+                                        <osd:description>List of OptKindsIDs (options) that are used to verify all the required options chosen by the user in order to build an orderable vehicle. It is a comma-delimited list of OptKindIDs with leading zeros to length of 3).&#13;
+Example: 5,006,007,008, 020,010,000,00 0,000</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="mktClassID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Market Class ID</osd:label>
+                                        <osd:description>Foreign key to the MktClass table. Market class is a vehicle classification scheme defined by the Environmental Protection Agency (EPA). See the&#13;
+Supplemental Data Reference document for a full list of Market Classes.&#13;
+Example: 4</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/MktClass</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="styleNameWOTrim" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style Name WO Trim</osd:label>
+                                        <osd:description>Vehicle Description with Trim removed.&#13;
+Example: 4WD Reg Cab 145"</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="trim" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Trim</osd:label>
+                                        <osd:description>Trim name.&#13;
+Example: XLT</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="passengerCapacity" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Passenger Capacity</osd:label>
+                                        <osd:description>Number of seats available based on number of doors, body style,&#13;
+etc.&#13;
+Example: 3</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="passangerDoors" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Passanger Doors</osd:label>
+                                        <osd:description>The number of full-sized independently operating&#13;
+passenger doors.&#13;
+Example: 2</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="manualTrans" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Manual Transmission</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: N</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="autoTrans" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Automatic Transmission</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: S</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="frontWD" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Front WD</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: N</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="rearWD" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Rear WD</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: N</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="allWD" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>All WD</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: N</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="fourWD" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Four WD</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: S</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="stepSide" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Step Side</osd:label>
+                                        <osd:description>S=Standard, O=Optional, N=Not Available.&#13;
+Example: N</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="caption" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Caption</osd:label>
+                                        <osd:description>Reserved for future use.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="availability" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Availability</osd:label>
+                                        <osd:description>This contains an indicator field of the fleet or retail only availability of a style. The valid values are:&#13;
+F = Fleet Only  &#13;
+R = Retail Only&#13;
+P = Police Only&#13;
+“ " = No restriction (i.e. available to all buyers)</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="priceState" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Price State</osd:label>
+                                        <osd:description>Indicates whether the price is the actual price or unknown. Valid values are “Confirmed”, “Unknown”, and “Estimated”.&#13;
+Example: Confirmed</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="autoBuilderStyleID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Auto Builder Style ID</osd:label>
+                                        <osd:description>This style ID represents the Style ID from the AutoBuilder product. This style ID can be used to link to the AutoBuilder con guration APIs.&#13;
+Example: w2011k18m3t23</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="cfModelName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Consumer Friendly Model Name</osd:label>
+                                        <osd:description>This is a consumer-friendly model name geared toward what the customer would expect to see. It can be used in lieu of the Model Name listed in the Models table.&#13;
+Example: F-150</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="cfStyleName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Consumer Friendly Style Name</osd:label>
+                                        <osd:description>This is a consumer-friendly style name can be used as an alternate to the Chrome Style Name.&#13;
+Example: 4WD Regular Cab 8 Ft Box XLT</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="cfDriveTrain" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Consumer Friendly Drive Train</osd:label>
+                                        <osd:description>This is the standard drivetrain for the vehicle, used for grouping like styles.&#13;
+Example: Four Wheel Drive</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="cfBodyType" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Consumer Friendly Body Type</osd:label>
+                                        <osd:description>This is a simplified description of the body type used for grouping like styles.&#13;
+Example: Regular Cab Pickup - Long Bed</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="subdivisions" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Subdivisions</osd:label>
+                                <osd:description>This table contains a list of subdivisions (formerly known as makes) for each division. An example of a Chrome Subdivision is “Chevy Cars,” which is a subset of the Division “Chevrolet.”</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/subdivisionID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="modelYear" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Model Year</osd:label>
+                                        <osd:description>Model year.&#13;
+Example: 2011</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="divisionID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Division ID</osd:label>
+                                        <osd:description>Foreign key for Division table.&#13;
+Example: 13</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Divisions</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="subdivisionID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivision ID</osd:label>
+                                        <osd:description>Primary Key&#13;
+Example: 6729</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="histSubdivisionID" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Historical Subdivision ID</osd:label>
+                                        <osd:description>Two-digit historical identi er which is provided to assist with transition and integration with legacy products. Hist Subdivision ID is only unique in combination with a Model Year. By itself, the Subdivision ID is duplicated. New, unique Subdivision IDs do not have this problem, but separate Subdivision records still exist for each Model Year.&#13;
+NOTE: Vehicles which do not have a Hist Subdivision ID have a null value in this  eld (includes exotic vehicles and other vehicle divisions not covered prior to 2003).&#13;
+Example: 18</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="subdivisionName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivision Name</osd:label>
+                                        <osd:description>Subdivision name.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TechSpecs" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Tech Specifications</osd:label>
+                                <osd:description>This table contains technical speci cation information by style ID (linked from Styles table). This information (such as Title ID and Sequence) is displayed as “Tech Specs”. Since technical specifications (such as Horsepower) can vary based on the selected options, the Condition field determines which value applies to a given state of option selection.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/styleID /titleID /sequence </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="styleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Style ID</osd:label>
+                                        <osd:description>Foreign key for the Styles table.&#13;
+Example: 330179</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Styles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="titleID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Title ID</osd:label>
+                                        <osd:description>Foreign key for the TechTitles table. See the Supplemental Data Reference document for a full list of Chrome tech titles.&#13;
+Example: 129</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/TechTitles</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Order for displaying the technical specs.&#13;
+Example: 309</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="text" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Text</osd:label>
+                                        <osd:description>Text to be displayed.&#13;
+Example: 3.55</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="condition" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Condition</osd:label>
+                                        <osd:description>Condition in which Text is displayed. The contents of this field will consist of Option Code(s) and Boolean Logic. Null condition indicates a default value.&#13;
+Example: XH9,X19</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TechTitleHeader" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Tech Title Header</osd:label>
+                                <osd:description>This table contains lookup information for tech title header ID mappings (linked by TechTitleHeaderID from the TechTitles table). See The Supplemental Data Reference document for a full list of Chrome tech titles.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/techTitleHeaderID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="techTitleHeaderID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Tech Title Header ID</osd:label>
+                                        <osd:description>Primary key. Should never change for existing Tech Title Headers.&#13;
+Example: 17</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="techTitleHeaderText" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Tech Title Header Text</osd:label>
+                                        <osd:description>Tech Title Header Text description.&#13;
+Example: Suspension</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Order for displaying the Tech Title Headers.&#13;
+Example: 13000</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TechTitles" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Tech Titles</osd:label>
+                                <osd:description>This table contains the header information for technical information (linked by Title ID from the TechSpecs table). See The Supplemental Data Reference document for a full list of Chrome tech titles.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/titleID </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="titleID" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Title ID</osd:label>
+                                        <osd:description>Primary key. Should never change for existing Titles.&#13;
+Example: 129</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sequence" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Sequence</osd:label>
+                                        <osd:description>Order in which items are displayed.&#13;
+Example: 100</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Title</osd:label>
+                                        <osd:description>Tech Specification Title.&#13;
+Example: Axle Ratio (:1) – Front</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="TechTitleHeaderID" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Tech Title Header ID</osd:label>
+                                        <osd:description>Foreign key for the TechTitleHeader table.&#13;
+Example: 17</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/TechTitleHeader</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Version" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Version</osd:label>
+                                <osd:description>This table contains a single record containing the data and schema version. Only one value should be specified for each of the fields. This information may be useful to Chrome Client Support when investigating any issues with the data. This document describes the schema “NVD” version 3.1.</osd:description>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/product </primaryKeys>
+                                </osd:table>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="product" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Product</osd:label>
+                                        <osd:description>The name of the data product being described.&#13;
+Example: Fleet Chrome New Vehicle Data</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="dataVersion" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Data Version</osd:label>
+                                        <osd:description>The time and date that the data was generated.&#13;
+Example: 10/14/10 14:45</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="dateReleaseID" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Date Released ID</osd:label>
+                                        <osd:description>Internal Chrome CMS ID number (Database ID) associated with this version of the data.&#13;
+Example: 118165</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="schemaName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Schema Name</osd:label>
+                                        <osd:description>A name assigned to the data schema.&#13;
+Example: NVD</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="schemaVersion" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Schema Version</osd:label>
+                                        <osd:description>The version number associated with the data schema.&#13;
+Example: 3.1</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Country</osd:label>
+                                        <osd:description>The country with which the product is associated. Valid values are “US” and “CA”.&#13;
+Example: US</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Language</osd:label>
+                                        <osd:description>The language in which the data is presented. Valid values are “EN” and “FR”.&#13;
+Example: EN</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

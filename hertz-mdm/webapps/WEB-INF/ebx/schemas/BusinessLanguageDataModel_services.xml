@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=BusinessLanguageDataModel] on Tue May 16 13:20:16 EDT 2017 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

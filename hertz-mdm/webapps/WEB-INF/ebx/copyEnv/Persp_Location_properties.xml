@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><x:root xmlns:x="urn:ebx-schemas:cfx_1.0">
+    <domain>
+        <properties>
+            <activated>true</activated>
+            <perspectiveType>Simplified</perspectiveType>
+            <allowedProfiles>RLOCN - Data Approver</allowedProfiles>
+            <allowedProfiles>Badministrator</allowedProfiles>
+            <allowedProfiles>RLOCN - Data Entry</allowedProfiles>
+            <allowedProfiles>RLOCN - Area Manager</allowedProfiles>
+            <allowedProfiles>RLOCN - Central Back Office</allowedProfiles>
+            <allowedProfiles>RLOCN - Regional Finance</allowedProfiles>
+            <allowedProfiles>RLOCN - Real Estate</allowedProfiles>
+            <allowedProfiles>RLOCN - Regional VP</allowedProfiles>
+            <allowedProfiles>RLOCN - Facilities and Construction</allowedProfiles>
+            <allowedProfiles>RLOCN - Concessions</allowedProfiles>
+            <allowedProfiles>RLOCN - Environmental Affairs</allowedProfiles>
+            <allowedProfiles>RLOCN - IT PMO</allowedProfiles>
+            <allowedProfiles>RLOCN - Tax</allowedProfiles>
+            <allowedProfiles>RLOCN - GDD</allowedProfiles>
+            <allowedProfiles>RLOCN - Yield Manager</allowedProfiles>
+            <allowedProfiles>RLOCN - Revenue Manager</allowedProfiles>
+            <allowedProfiles>RLOCN - GDS</allowedProfiles>
+            <allowedProfiles>RLOCN - RAC Operations</allowedProfiles>
+            <allowedProfiles>RLOCN - Accounting</allowedProfiles>
+            <allowedProfiles>RLOCN - Res Maint</allowedProfiles>
+            <allowedProfiles>RLOCN - Res Delivery</allowedProfiles>
+            <allowedProfiles>RLOCN - CarRentVAW</allowedProfiles>
+            <allowedProfiles>RLOCN - CARS+ Admin</allowedProfiles>
+            <allowedProfiles>RLOCN - Treasury</allowedProfiles>
+            <allowedProfiles>RLOCN - MFD Helpdesk</allowedProfiles>
+            <allowedProfiles>RLOCN - Translation Team</allowedProfiles>
+            <allowedProfiles>RLOCN - HR</allowedProfiles>
+            <allowedProfiles>RLOCN - DASH Admin</allowedProfiles>
+            <allowedProfiles>RLOCN - Bank Reconciliation</allowedProfiles>
+            <allowedProfiles>RLOCN - Fixed Assets</allowedProfiles>
+            <allowedProfiles>RLOCN - Central Back Office Admin</allowedProfiles>
+            <allowedProfiles>RLOCN - Competitive Intelligence</allowedProfiles>
+            <allowedProfiles>RLOCN - Fleet</allowedProfiles>
+            <allowedProfiles>RLOCN - Offsell</allowedProfiles>
+            <allowedProfiles>RLOCN - Res Dump</allowedProfiles>
+            <allowedProfiles>RLOCN - HLE Revenue Management</allowedProfiles>
+            <allowedProfiles>RLOCN - Rentworks</allowedProfiles>
+            <allowedProfiles>RLOCN - RAC Revenue Management</allowedProfiles>
+            <allowedProfiles>RLOCN - HLES Group</allowedProfiles>
+            <allowedProfiles>RLOCN - Car Sales</allowedProfiles>
+            <allowedProfiles>RLOCN - RMS Support</allowedProfiles>
+            <allowedProfiles>RTech Admin</allowedProfiles>
+            <allowedProfiles>RLOCN - Rates Manager</allowedProfiles>
+            <allowedProfiles>RLOCN - Property and Concessions</allowedProfiles>
+        </properties>
+    </domain>
+</x:root>

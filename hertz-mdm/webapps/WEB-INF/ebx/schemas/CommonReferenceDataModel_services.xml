@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=CommonReferenceDataModel] on Fri Nov 17 16:45:30 EST 2017 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="DisplayFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Display Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/DisplayValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateCommonReferenceDataGroup1Workflow">
+        <documentation xml:lang="en-US">
+            <label>Create Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchCreateCommonReferenceDataGroup1.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType</path>
+                <path>/root/Airline</path>
+                <path>/root/Airport</path>
+                <path>/root/City</path>
+                <path>/root/Continent</path>
+                <path>/root/Country_ISO3166-1</path>
+                <path>/root/CountryTimeZoneRelationship</path>
+                <path>/root/Currency</path>
+                <path>/root/DaysOfWeek</path>
+                <path>/root/EMailAddressType</path>
+                <path>/root/GeographicArea</path>
+                <path>/root/Note</path>
+                <path>/root/NoteType</path>
+                <path>/root/OfficialAirlineGuide</path>
+                <path>/root/PaymentType</path>
+                <path>/root/PhoneType</path>
+                <path>/root/RentalCarBrand</path>
+                <path>/root/SourceSystem</path>
+                <path>/root/StateProvinceTimeZoneRelationship</path>
+                <path>/root/Subdivision_ISO3166-2</path>
+                <path>/root/TimeZone</path>
+                <path>/root/UnitOfMeasure</path>
+                <path>/root/Website</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateCommonReferenceDataGroup2Workflow">
+        <documentation xml:lang="en-US">
+            <label>Create Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchCreateCommonReferenceDataGroup2.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType</path>
+                <path>/root/Airline</path>
+                <path>/root/Airport</path>
+                <path>/root/City</path>
+                <path>/root/Continent</path>
+                <path>/root/Country_ISO3166-1</path>
+                <path>/root/CountryTimeZoneRelationship</path>
+                <path>/root/Currency</path>
+                <path>/root/DaysOfWeek</path>
+                <path>/root/EMailAddressType</path>
+                <path>/root/GeographicArea</path>
+                <path>/root/Note</path>
+                <path>/root/NoteType</path>
+                <path>/root/OfficialAirlineGuide</path>
+                <path>/root/PaymentType</path>
+                <path>/root/PhoneType</path>
+                <path>/root/RentalCarBrand</path>
+                <path>/root/SourceSystem</path>
+                <path>/root/StateProvinceTimeZoneRelationship</path>
+                <path>/root/Subdivision_ISO3166-2</path>
+                <path>/root/TimeZone</path>
+                <path>/root/UnitOfMeasure</path>
+                <path>/root/Website</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateCommonReferenceDataGroup3Workflow">
+        <documentation xml:lang="en-US">
+            <label>Create Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchCreateCommonReferenceDataGroup3.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType</path>
+                <path>/root/Airline</path>
+                <path>/root/Airport</path>
+                <path>/root/City</path>
+                <path>/root/Continent</path>
+                <path>/root/Country_ISO3166-1</path>
+                <path>/root/CountryTimeZoneRelationship</path>
+                <path>/root/Currency</path>
+                <path>/root/DaysOfWeek</path>
+                <path>/root/EMailAddressType</path>
+                <path>/root/GeographicArea</path>
+                <path>/root/Note</path>
+                <path>/root/NoteType</path>
+                <path>/root/OfficialAirlineGuide</path>
+                <path>/root/PaymentType</path>
+                <path>/root/PhoneType</path>
+                <path>/root/RentalCarBrand</path>
+                <path>/root/SourceSystem</path>
+                <path>/root/StateProvinceTimeZoneRelationship</path>
+                <path>/root/Subdivision_ISO3166-2</path>
+                <path>/root/TimeZone</path>
+                <path>/root/UnitOfMeasure</path>
+                <path>/root/Website</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCreateCommonReferenceWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Create Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchCreateCommonReferenceRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType</path>
+                <path>/root/Airline</path>
+                <path>/root/Airport</path>
+                <path>/root/City</path>
+                <path>/root/Continent</path>
+                <path>/root/Country_ISO3166-1</path>
+                <path>/root/CountryTimeZoneRelationship</path>
+                <path>/root/Currency</path>
+                <path>/root/DaysOfWeek</path>
+                <path>/root/EMailAddressType</path>
+                <path>/root/GeographicArea</path>
+                <path>/root/Note</path>
+                <path>/root/NoteType</path>
+                <path>/root/OfficialAirlineGuide</path>
+                <path>/root/PaymentType</path>
+                <path>/root/PhoneType</path>
+                <path>/root/RentalCarBrand</path>
+                <path>/root/SourceSystem</path>
+                <path>/root/StateProvinceTimeZoneRelationship</path>
+                <path>/root/Subdivision_ISO3166-2</path>
+                <path>/root/TimeZone</path>
+                <path>/root/UnitOfMeasure</path>
+                <path>/root/Website</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainCommonReferenceDataGroup1Workflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchMaintainCommonReferenceDataGroup1.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType{1}</path>
+                <path>/root/Airline{1}</path>
+                <path>/root/Airport{1}</path>
+                <path>/root/City{1}</path>
+                <path>/root/Continent{1}</path>
+                <path>/root/Country_ISO3166-1{1}</path>
+                <path>/root/CountryTimeZoneRelationship{1}</path>
+                <path>/root/Currency{1}</path>
+                <path>/root/DaysOfWeek{1}</path>
+                <path>/root/EMailAddressType{1}</path>
+                <path>/root/GeographicArea{1}</path>
+                <path>/root/Note{1}</path>
+                <path>/root/NoteType{1}</path>
+                <path>/root/OfficialAirlineGuide{1}</path>
+                <path>/root/PaymentType{1}</path>
+                <path>/root/PhoneType{1}</path>
+                <path>/root/RentalCarBrand{1}</path>
+                <path>/root/SourceSystem{1}</path>
+                <path>/root/StateProvinceTimeZoneRelationship{1}</path>
+                <path>/root/Subdivision_ISO3166-2{1}</path>
+                <path>/root/TimeZone{1}</path>
+                <path>/root/UnitOfMeasure{1}</path>
+                <path>/root/Website{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainCommonReferenceDataGroup2Workflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchMaintainCommonReferenceDataGroup2.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType{1}</path>
+                <path>/root/Airline{1}</path>
+                <path>/root/Airport{1}</path>
+                <path>/root/City{1}</path>
+                <path>/root/Continent{1}</path>
+                <path>/root/Country_ISO3166-1{1}</path>
+                <path>/root/CountryTimeZoneRelationship{1}</path>
+                <path>/root/Currency{1}</path>
+                <path>/root/DaysOfWeek{1}</path>
+                <path>/root/EMailAddressType{1}</path>
+                <path>/root/GeographicArea{1}</path>
+                <path>/root/Note{1}</path>
+                <path>/root/NoteType{1}</path>
+                <path>/root/OfficialAirlineGuide{1}</path>
+                <path>/root/PaymentType{1}</path>
+                <path>/root/PhoneType{1}</path>
+                <path>/root/RentalCarBrand{1}</path>
+                <path>/root/SourceSystem{1}</path>
+                <path>/root/StateProvinceTimeZoneRelationship{1}</path>
+                <path>/root/Subdivision_ISO3166-2{1}</path>
+                <path>/root/TimeZone{1}</path>
+                <path>/root/UnitOfMeasure{1}</path>
+                <path>/root/Website{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainCommonReferenceDataGroup3Workflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchMaintainCommonReferenceDataGroup3.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType{1}</path>
+                <path>/root/Airline{1}</path>
+                <path>/root/Airport{1}</path>
+                <path>/root/City{1}</path>
+                <path>/root/Continent{1}</path>
+                <path>/root/Country_ISO3166-1{1}</path>
+                <path>/root/CountryTimeZoneRelationship{1}</path>
+                <path>/root/Currency{1}</path>
+                <path>/root/DaysOfWeek{1}</path>
+                <path>/root/EMailAddressType{1}</path>
+                <path>/root/GeographicArea{1}</path>
+                <path>/root/Note{1}</path>
+                <path>/root/NoteType{1}</path>
+                <path>/root/OfficialAirlineGuide{1}</path>
+                <path>/root/PaymentType{1}</path>
+                <path>/root/PhoneType{1}</path>
+                <path>/root/RentalCarBrand{1}</path>
+                <path>/root/SourceSystem{1}</path>
+                <path>/root/StateProvinceTimeZoneRelationship{1}</path>
+                <path>/root/Subdivision_ISO3166-2{1}</path>
+                <path>/root/TimeZone{1}</path>
+                <path>/root/UnitOfMeasure{1}</path>
+                <path>/root/Website{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainCommonReferenceWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Common Reference Data</label>
+        </documentation>
+        <resourcePath>/services/common reference/LaunchMaintainCommonReferenceRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/AddressType{1}</path>
+                <path>/root/Airline{1}</path>
+                <path>/root/Airport{1}</path>
+                <path>/root/City{1}</path>
+                <path>/root/Continent{1}</path>
+                <path>/root/Country_ISO3166-1{1}</path>
+                <path>/root/CountryTimeZoneRelationship{1}</path>
+                <path>/root/Currency{1}</path>
+                <path>/root/DaysOfWeek{1}</path>
+                <path>/root/EMailAddressType{1}</path>
+                <path>/root/GeographicArea{1}</path>
+                <path>/root/Note{1}</path>
+                <path>/root/NoteType{1}</path>
+                <path>/root/OfficialAirlineGuide{1}</path>
+                <path>/root/PaymentType{1}</path>
+                <path>/root/PhoneType{1}</path>
+                <path>/root/RentalCarBrand{1}</path>
+                <path>/root/SourceSystem{1}</path>
+                <path>/root/StateProvinceTimeZoneRelationship{1}</path>
+                <path>/root/Subdivision_ISO3166-2{1}</path>
+                <path>/root/TimeZone{1}</path>
+                <path>/root/UnitOfMeasure{1}</path>
+                <path>/root/Website{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=VehicleReferenceDataModel] on Tue Feb 20 15:26:33 EST 2018 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:include schemaLocation="./CommonTypesDataModel.xsd"/>
+    <xs:include schemaLocation="./BasicTypesDataModel.xsd"/>
+    <xs:include schemaLocation="./VehicleTypesDataModel.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>none</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../hertz-mdm/webapps/hertz-mdm/../../src">
+                <javaPathConstants typeName="com.hertz.mdm.vehicle.path.VehicleReferencePaths">
+                    <nodes root="/" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+        </xs:appinfo>
+    </xs:annotation>
+    
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CustomerData" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Customer Data</osd:label>
+                        </xs:documentation>
+                    </xs:annotation>
+                    
+                    <xs:complexType>
+                        <xs:sequence>
+                            
+                            <xs:element name="Customer" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Customer</osd:label>
+                                        <osd:description>This table contains Customer data.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/customerID</primaryKeys>
+                                            <historyProfile>ebx-allBranches</historyProfile>
+                                            <defaultLabel>${./customerID}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="customerID" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Customer ID</osd:label>
+                                                    <osd:description>Customer Identifier</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="first_name" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>First Name</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="20"/>
+												</xs:restriction>
+											</xs:simpleType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+
+                            </xs:element>
+                            
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

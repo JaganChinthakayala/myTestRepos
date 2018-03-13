@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:ebx-schemas:module_2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ebx-schemas:module_2.2 http://schema.orchestranetworks.com/module_2.2.xsd">
+	<name>hertz-mdm</name>
+	<publicPath>hertz-mdm</publicPath>
+	<locales>
+		<locale>fr_FR</locale>
+		<locale isDefault="true">en_US</locale>
+	</locales>
+	
+	<services>
+		<serviceExtension name="LocationProjectCreateService" extends="@creation">
+			<documentation xml:lang="en-US">
+				<label>[Location] Create a new Location Project record</label>
+				<description>Extension of the record creation service for Location Project related workflows</description>
+			</documentation>
+			<properties>
+				<property name="projectType" input="true">
+					<documentation xml:lang="en-US">
+                        <label>Project Type</label>
+                        <description>
+                           The project type (e.g. "New Location")
+                        </description>
+                    </documentation>
+				</property>
+				<property name="projectName" input="true">
+					<documentation xml:lang="en-US">
+                        <label>Project Name</label>
+                        <description>
+                           The project name
+                        </description>
+                    </documentation>
+				</property>
+				<property name="launchLocationId" input="true">
+					<documentation xml:lang="en-US">
+                        <label>Launch Location Id</label>
+                        <description>
+                           If this Workflow is being launched by another workflow, this is the LocationId of the Location
+                        </description>
+                    </documentation>
+				</property>
+				<property name="record" input="true">
+					<documentation xml:lang="en-US">
+                        <label>Record</label>
+                        <description>
+                           The record, if it already exists
+                        </description>
+                    </documentation>
+				</property>
+			</properties>
+		</serviceExtension>		
+		<serviceExtension name="LocationProjectAccessService" extends="@default">
+			<documentation xml:lang="en-US">
+				<label>[Location] Access Location Project record</label>
+				<description>Extension of the record access service for Location Project related workflows</description>
+			</documentation>
+			<properties>
+				<property name="projectType" input="true">
+					<documentation xml:lang="en-US">
+                        <label>Project Type</label>
+                        <description>
+                           The project type (e.g. "New Location")
+                        </description>
+                    </documentation>
+				</property>
+				<property name="projectName" input="true">
+					<documentation xml:lang="en-US">
+                        <label>Project Name</label>
+                        <description>
+                           The project name
+                        </description>
+                    </documentation>
+				</property>
+			</properties>
+		</serviceExtension>	
+	</services>
+	<beans>
+		<bean className="com.orchestranetworks.ps.scripttask.SetContextValueScriptTask">
+            <documentation xml:lang="en-US">
+                <label>Set context value</label>
+                <description>
+                    Set a value to a context variable
+                </description>
+            </documentation>
+            <properties>
+                <property name="inputValue" input="true">
+                    <documentation xml:lang="en-US">
+                        <label>Input Value</label>
+                        <description>
+                           Value to set in the context
+                        </description>
+                    </documentation>
+                </property>
+                <property name="outputValue" output="true">
+                    <documentation xml:lang="en-US">
+                        <label>Output Value</label>
+                        <description>
+                           Output value to set it to
+                        </description>
+                    </documentation>
+                </property>
+            </properties>
+        </bean>
+		<bean className="com.orchestranetworks.ps.scripttask.SetValueScriptTask">
+		    <documentation xml:lang="en-US">
+			<label>Set value</label>
+			<description>
+			    Set a value to a field
+			</description>
+		    </documentation>
+		    <properties>
+			<property name="dataspace" input="true">
+			    <documentation xml:lang="en-US">
+				<label>Data space</label>
+				<description>
+				   The data space where the value to set is located
+				</description>
+			    </documentation>
+			</property>
+			<property name="dataset" input="true">
+			    <documentation xml:lang="en-US">
+				<label>Data set</label>
+				<description>
+				    The data set where the value to set is located
+				</description>
+			    </documentation>
+			</property>
+			<property name="xpath" input="true">
+			    <documentation xml:lang="en-US">
+				 <label>XPath</label>
+				<description>
+				   XPath to the record where the value to set is located
+				</description>
+			    </documentation>
+			</property>
+			<property name="path" input="true">
+				<documentation xml:lang="en-US">
+				<label>Path</label>
+				<description>
+				   Path to the field to set
+				</description>
+			    </documentation>
+			</property>
+			<property name="value" input="true">
+			    <documentation xml:lang="en-US">
+				<label>Value</label>
+				<description>
+				   Value to set in the selected field
+				</description>
+			    </documentation>
+			</property>
+		    </properties>
+		</bean>
+		<bean className="com.orchestranetworks.ps.scripttask.LaunchWorkflowScriptTask">
+		    <documentation xml:lang="en-US">
+			<label>Launch a Workflow</label>
+			<description>
+			    Create a process instance of a given publication
+			</description>
+		    </documentation>
+		    <properties>
+			<property name="workflow" input="true">
+			    <documentation xml:lang="en-US">
+				<label>Workflow publication</label>
+				<description>
+				   Workflow publication to launch
+				</description>
+			    </documentation>
+			</property>
+		    </properties>
+		</bean>
+		<bean className="com.orchestranetworks.ps.condition.PredicateCondition">
+		    <documentation xml:lang="en-US">
+			<label>Predicate is true?</label>
+			<description>
+			    Test if a XPath predicate is true
+			</description>
+		    </documentation>
+		    <properties>
+			<property name="dataspace" input="true">
+			    <documentation xml:lang="en-US">
+				<label>Data space</label>
+				<description>
+				   The data space where to apply the predicate
+				</description>
+			    </documentation>
+			</property>
+			<property name="dataset" input="true">
+			    <documentation xml:lang="en-US">
+				<label>Data set</label>
+				<description>
+				    The data where to apply the predicate
+				</description>
+			    </documentation>
+			</property>
+			<property name="xpath" input="true">
+			    <documentation xml:lang="en-US">
+				 <label>XPath</label>
+				<description>
+				   XPath to the record where to apply the predicate
+				</description>
+			    </documentation>
+			</property>
+			<property name="predicate" input="true">
+				<documentation xml:lang="en-US">
+				<label>Predicate</label>
+				<description>
+					Predicate to test
+				</description>
+			    </documentation>
+			</property>
+		    </properties>
+		</bean>
+		<bean className="com.orchestranetworks.ps.project.actionpermissions.ProjectWorkflowActionPermissions">
+		</bean>
+		<bean className="com.orchestranetworks.ps.project.workflow.trigger.ProjectWorkflowTrigger">
+		</bean>
+	</beans>
+</module>
+

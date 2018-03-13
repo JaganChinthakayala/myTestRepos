@@ -1,0 +1,44 @@
+~Style ID~,~Image ID~,~File Name~,~Type~,~Background~,~Size~,~Carryover~,~Year~,~Division Name~,~Model Name~,~Body Type~,~Exact Match~,~OEM Temp~
+389579,~2017LES160001_320~,~2017LES160001_320_02.jpg~,~MultiView~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_03.jpg~,~MultiView~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_12.jpg~,~MultiView~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_01.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_02.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_03.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_12.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_01.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_02.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_03.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_12.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_01.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_02.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_03.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_640~,~2017LES160001_640_12.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_1280~,~2017LES160001_1280_01.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_1280~,~2017LES160001_1280_02.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_1280~,~2017LES160001_1280_03.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_1280~,~2017LES160001_1280_12.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_01.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_02.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_03.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_05.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_06.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_07.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_11.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+389579,~2017LES160001_320~,~2017LES160001_320_12.jpg~,~Expanded~,~White~,~320~,~Y~,~2017~,~Lexus~,~NX~,~NX300h~,~N~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_01.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_02.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_03.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_12.jpg~,~MultiView~,~White~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_320~,~2017GMT320023_320_01.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_320~,~2017GMT320023_320_02.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_320~,~2017GMT320023_320_03.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_320~,~2017GMT320023_320_12.png~,~MultiView~,~Transparent~,~320~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_01.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_02.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_03.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_640~,~2017GMT320023_640_12.png~,~MultiView~,~Transparent~,~640~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_1280~,~2017GMT320023_1280_01.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_1280~,~2017GMT320023_1280_02.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_1280~,~2017GMT320023_1280_03.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~
+388664,~2017GMT320023_1280~,~2017GMT320023_1280_12.png~,~MultiView~,~Transparent~,~1280~,~Y~,~2017~,~GMC~,~Sierra 3500HD~,~Crew Cab Denali SRW~,~Y~,~N~

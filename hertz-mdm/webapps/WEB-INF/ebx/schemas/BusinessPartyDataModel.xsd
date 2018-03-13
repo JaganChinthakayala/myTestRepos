@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=BusinessPartyDataModel] on Mon Sep 04 10:56:45 EDT 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:include schemaLocation="urn:ebx:module:hertz-mdm:/WEB-INF/ebx/schemas/BasicTypesDataModel.xsd"/>
+    <xs:include schemaLocation="urn:ebx:module:hertz-mdm:/WEB-INF/ebx/schemas/CommonTypesDataModel.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:extensions class="com.hertz.mdm.businessparty.schemaextension.BusinessPartySchemaExtension"/>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../hertz-mdm/webapps/hertz-mdm/../../src">
+                <javaPathConstants typeName="com.hertz.mdm.businessparty.path.BusinessPartyPaths">
+                    <nodes root="/" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+            <osd:replication>
+                <name>BusinessPartyDataSet</name>
+                <dataSpace>BusinessPartyMasterDataSpace</dataSpace>
+                <dataSet>BusinessPartyDataSet</dataSet>
+                <refresh>onCommit</refresh>
+                <table>
+                    <path>/root/BusinessPartyData/Address</path>
+                    <nameInDatabase>db_bpty_business_party_address</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/BusinessPartyData/Email</path>
+                    <nameInDatabase>db_bpty_business_party_email</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/BusinessPartyData/Phone</path>
+                    <nameInDatabase>db_bpty_business_party_phone</nameInDatabase>
+                </table>
+            </osd:replication>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BusinessParty" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>Business Party</osd:label>
+                            </xs:documentation>
+                            <xs:appinfo>
+                                <osd:table>
+                                    <primaryKeys>/id </primaryKeys>
+                                    <defaultLabel>${./name} (${./businessPartyType})</defaultLabel>
+                                </osd:table>
+                                <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyTableTrigger"/>
+                                <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Id</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:autoIncrement/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="name" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="businessPartyType" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Business Party Type</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>BusinessPartyReferenceDataSet</container>
+                                                <tablePath>/root/BusinessPartyType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="organizationParent" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Organization Parent</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/BusinessParty</tablePath>
+                                                <filter>
+                                                    <predicate>./businessPartyType = "ORGANIZATION" and (./id != ${../id})</predicate>
+                                                </filter>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ebxUser" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>EBX User</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>ebx-directory</container>
+                                                <branch>ebx-directory</branch>
+                                                <tablePath>/directory/users</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                        <osd:replication disable="true"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ebxUserLogin" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>EBX User Login</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:inheritance>
+                                            <sourceRecord>/root/BusinessParty/ebxUser</sourceRecord>
+                                            <sourceNode>./login</sourceNode>
+                                        </osd:inheritance>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Addresses" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Addresses</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/BusinessPartyData/Address/businessParty</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="eMailAddresses" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>EMail Addresses</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/BusinessPartyData/Email/businessParty</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="phones" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Phones</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/BusinessPartyData/Phone/businessParty</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="organziationMembers" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Organization Members</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/BusinessParty/organizationParent</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roles" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Hertz Roles</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/BusinessPartyData/BusinessPartyRole/businessParty</fieldToSource>
+                                            </tableRefInverse>
+                                            <xpathFilter><![CDATA[./roleCategory="Hertz"]]></xpathFilter>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                            <tabularView>
+                                                <column>/businessPartyRoleType</column>
+                                                <column>/businessPartyType</column>
+                                                <column>/additionalInformation</column>
+                                                <column>/effectiveStartEndDates/startDate</column>
+                                                <column>/effectiveStartEndDates/endDate</column>
+                                                <column>/isRecordActive</column>
+                                                <sort>
+                                                    <nodePath>/businessParty</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                                <sort>
+                                                    <nodePath>/businessPartyRoleType</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                            </tabularView>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ebxRoles" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>EBX Roles</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/BusinessPartyData/BusinessPartyRole/businessParty</fieldToSource>
+                                            </tableRefInverse>
+                                            <xpathFilter><![CDATA[./roleCategory="EBX"]]></xpathFilter>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                            <tabularView>
+                                                <column>/businessPartyRoleType</column>
+                                                <column>/businessPartyType</column>
+                                                <column>/additionalInformation</column>
+                                                <column>/effectiveStartEndDates/startDate</column>
+                                                <column>/effectiveStartEndDates/endDate</column>
+                                                <column>/isRecordActive</column>
+                                                <sort>
+                                                    <nodePath>/businessParty</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                                <sort>
+                                                    <nodePath>/businessPartyRoleType</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                            </tabularView>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BusinessPartyData" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en-US">
+                                <osd:label>-- Business Party Data</osd:label>
+                            </xs:documentation>
+                        </xs:annotation>
+                        <xs:sequence>
+                            <xs:element name="BusinessPartyRole" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:annotation>
+                                        <xs:documentation xml:lang="en-US">
+                                            <osd:label>Business Party Role</osd:label>
+                                        </xs:documentation>
+                                        <xs:appinfo>
+                                            <osd:table>
+                                                <primaryKeys>/id </primaryKeys>
+                                                <historyProfile>ebx-allBranches</historyProfile>
+                                                <defaultLabel>${./businessParty} - ${./businessPartyRoleType}</defaultLabel>
+                                            </osd:table>
+                                            <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                                        </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Id</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="businessParty" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Business Party</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/BusinessParty</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="businessPartyRoleType" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Business Party Role Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>BusinessPartyReferenceDataSet</container>
+                                                            <tablePath>/root/BusinessPartyRoleType</tablePath>
+                                                            <filter>
+                                                                <predicate>./businessPartyType=${../businessPartyType}</predicate>
+                                                            </filter>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="roleCategory" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Role Category</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:inheritance>
+                                                        <sourceRecord>/root/BusinessPartyData/BusinessPartyRole/businessPartyRoleType</sourceRecord>
+                                                        <sourceNode>./roleCategory</sourceNode>
+                                                    </osd:inheritance>
+                                                    <osd:replication disable="true"/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                    <xs:enumeration value="Hertz"/>
+                                                    <xs:enumeration value="EBX"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="businessPartyType" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Business Party Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:inheritance>
+                                                        <sourceRecord>/root/BusinessPartyData/BusinessPartyRole/businessParty</sourceRecord>
+                                                        <sourceNode>./businessPartyType</sourceNode>
+                                                    </osd:inheritance>
+                                                    <osd:replication disable="true"/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="additionalInformation" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Additional Information</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="osd:text">
+                                                    <xs:maxLength value="2000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Effective Start/End Dates</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Record Active?</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Address" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:annotation>
+                                        <xs:documentation xml:lang="en-US">
+                                            <osd:label>Address</osd:label>
+                                        </xs:documentation>
+                                        <xs:appinfo>
+                                            <osd:table>
+                                                <primaryKeys>/id </primaryKeys>
+                                                <historyProfile>ebx-allBranches</historyProfile>
+                                                <defaultLabel>${./businessParty} - ${./type}</defaultLabel>
+                                                <recordForm osd:class="com.hertz.mdm.businessparty.ui.form.address.AddressForm"/>
+                                            </osd:table>
+                                            <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                                        </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Id</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="businessParty" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Business Party</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/BusinessParty</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="primarySecondary" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Primary/Secondary</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                    <xs:enumeration value="Primary"/>
+                                                    <xs:enumeration value="Secondary"/>
+                                                    <xs:enumeration value="Other"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="type" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Type</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Address" type="HertzAddress" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Address</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="GeographicPoint" type="GeographicPoint" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Geographic Point</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="additionalInformation" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Additional Information</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="osd:text">
+                                                    <xs:maxLength value="2000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Effective Start/End Dates</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Record Active?</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Email" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:annotation>
+                                        <xs:documentation xml:lang="en-US">
+                                            <osd:label>Email Address</osd:label>
+                                        </xs:documentation>
+                                        <xs:appinfo>
+                                            <osd:table>
+                                                <primaryKeys>/id </primaryKeys>
+                                                <historyProfile>ebx-allBranches</historyProfile>
+                                                <defaultLabel>${./businessParty} - ${./eMailType}</defaultLabel>
+                                            </osd:table>
+                                            <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                                        </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Id</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="businessParty" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Business Party</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/BusinessParty</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="primarySecondary" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Primary/Secondary</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                    <xs:enumeration value="Primary"/>
+                                                    <xs:enumeration value="Secondary"/>
+                                                    <xs:enumeration value="Other"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="eMailType" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>EMail Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>CommonReferenceDataSet</container>
+                                                            <branch>CommonReferenceMasterDataSpace</branch>
+                                                            <tablePath>/root/EMailAddressType</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="eMailAddress" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>EMail Address</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="additionalInformation" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Additional Information</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="2000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Effective Start/End Dates</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Record Active?</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Phone" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:annotation>
+                                        <xs:documentation xml:lang="en-US">
+                                            <osd:label>Phone</osd:label>
+                                        </xs:documentation>
+                                        <xs:appinfo>
+                                            <osd:table>
+                                                <primaryKeys>/id </primaryKeys>
+                                                <historyProfile>ebx-allBranches</historyProfile>
+                                                <defaultLabel>${./businessParty} - ${./phoneType}</defaultLabel>
+                                            </osd:table>
+                                            <osd:trigger class="com.hertz.mdm.businessparty.trigger.BusinessPartyReferencesAndRelationshipTableTrigger"/>
+                                        </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Id</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="businessParty" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Business Party</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/BusinessParty</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="primarySecondary" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Primary/Secondary</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                    <xs:enumeration value="Primary"/>
+                                                    <xs:enumeration value="Secondary"/>
+                                                    <xs:enumeration value="Other"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="phoneType" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Phone Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>CommonReferenceDataSet</container>
+                                                            <branch>CommonReferenceMasterDataSpace</branch>
+                                                            <tablePath>/root/PhoneType</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="phoneNumber" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Phone Number</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="extension" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Extension</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="80"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="additionalInformation" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Additional Information</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="osd:text">
+                                                    <xs:maxLength value="2000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Effective Start/End Dates</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Record Active?</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

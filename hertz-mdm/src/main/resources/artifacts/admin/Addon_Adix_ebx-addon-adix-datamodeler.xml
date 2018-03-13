@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <Reference>
+        <DataTypeMapping>
+            <schemaTypeName>anyURI</schemaTypeName>
+            <valueInExcel>URI</valueInExcel>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>boolean</schemaTypeName>
+            <valueInExcel>Boolean</valueInExcel>
+            <sqlDataType>BOOLEAN</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>date</schemaTypeName>
+            <valueInExcel>Date</valueInExcel>
+            <sqlDataType>DATE</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>dateTime</schemaTypeName>
+            <valueInExcel>Date and time</valueInExcel>
+            <sqlDataType>SMALLDATETIME</sqlDataType>
+            <sqlDataType>DATETIME</sqlDataType>
+            <sqlDataType>TIMESTAMP</sqlDataType>
+            <sqlDataType>TIMESTAMP WITH TIMEZONE</sqlDataType>
+            <sqlDataType>TIMESTAMP WITHOUT TIMEZONE</sqlDataType>
+            <sqlDataType>TIMESTAMP WITH LOCAL TIMEZONE</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>decimal</schemaTypeName>
+            <valueInExcel>Decimal</valueInExcel>
+            <sqlDataType>DECIMAL</sqlDataType>
+            <sqlDataType>NUMERIC</sqlDataType>
+            <sqlDataType>MONEY</sqlDataType>
+            <sqlDataType>BIGINT</sqlDataType>
+            <sqlDataType>NUMBER(PRECISION)</sqlDataType>
+            <sqlDataType>BINARY_FLOAT</sqlDataType>
+            <sqlDataType>BINARY_DOUBLE</sqlDataType>
+            <sqlDataType>LONG</sqlDataType>
+            <sqlDataType>BIGSERIAL</sqlDataType>
+            <sqlDataType>DOUBLE PRECISION</sqlDataType>
+            <sqlDataType>REAL</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>email</schemaTypeName>
+            <valueInExcel>Email address</valueInExcel>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>int</schemaTypeName>
+            <valueInExcel>Integer</valueInExcel>
+            <sqlDataType>INT</sqlDataType>
+            <sqlDataType>SAMLLINT</sqlDataType>
+            <sqlDataType>INTEGER</sqlDataType>
+            <sqlDataType>SMALLSERIAL</sqlDataType>
+            <sqlDataType>SERIAL</sqlDataType>
+            <sqlDataType>NUMBER</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>locale</schemaTypeName>
+            <valueInExcel>Locale</valueInExcel>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>name</schemaTypeName>
+            <valueInExcel>XML name</valueInExcel>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>password</schemaTypeName>
+            <valueInExcel>Password</valueInExcel>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>string</schemaTypeName>
+            <valueInExcel>String</valueInExcel>
+            <sqlDataType>CHAR</sqlDataType>
+            <sqlDataType>VARCHAR</sqlDataType>
+            <sqlDataType>VARCHAR2</sqlDataType>
+            <sqlDataType>ROWID</sqlDataType>
+            <sqlDataType>BIT</sqlDataType>
+            <sqlDataType>BIT VARYING</sqlDataType>
+            <sqlDataType>BYTEA</sqlDataType>
+            <sqlDataType>CIDR</sqlDataType>
+            <sqlDataType>CHARACTER</sqlDataType>
+            <sqlDataType>CHARACTER VARYING</sqlDataType>
+            <sqlDataType>INET</sqlDataType>
+            <sqlDataType>TSQUERY</sqlDataType>
+            <sqlDataType>TSVECTOR</sqlDataType>
+            <sqlDataType>UUID</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>text</schemaTypeName>
+            <valueInExcel>Text</valueInExcel>
+            <sqlDataType>TEXT</sqlDataType>
+            <sqlDataType>NCHAR</sqlDataType>
+            <sqlDataType>NCHAR2</sqlDataType>
+            <sqlDataType>NVARCHAR</sqlDataType>
+            <sqlDataType>NVARCHAR2</sqlDataType>
+            <sqlDataType>NTEXT</sqlDataType>
+            <sqlDataType>XML</sqlDataType>
+            <sqlDataType>UROWID</sqlDataType>
+            <sqlDataType>JSON</sqlDataType>
+        </DataTypeMapping>
+        <DataTypeMapping>
+            <schemaTypeName>time</schemaTypeName>
+            <valueInExcel>Time</valueInExcel>
+            <sqlDataType>TIME</sqlDataType>
+            <sqlDataType>TIME</sqlDataType>
+            <sqlDataType>TIME WITH TIMEZONE</sqlDataType>
+            <sqlDataType>TIME WITHOUT TIMEZONE</sqlDataType>
+        </DataTypeMapping>
+    </Reference>
+</root>

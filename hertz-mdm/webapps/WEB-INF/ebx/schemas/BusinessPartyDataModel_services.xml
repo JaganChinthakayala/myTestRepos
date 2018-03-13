@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=BusinessPartyDataModel] on Mon Sep 04 10:56:45 EDT 2017 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="SynchronizeBusinessPartyDomainToEBXDirectory">
+        <documentation xml:lang="en-US">
+            <label>Synchronize Business Party Domain To EBX Directory</label>
+            <description>Synchronize EBX Directory and Business Party Domain</description>
+        </documentation>
+        <resourcePath>/services/businessparty/SynchronizeBusinessPartyDomainToEBXDirectory.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/BusinessParty</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

@@ -1,0 +1,35 @@
+@startuml
+
+salt
+{
+{T
+  + ebx_interface_files
+  ++ vehicle
+  +++ input
+  ++++ NVD_Fleet_US_EN_2018
+  +++++ US_ImageGalleryMapping_2018_Vehicle.txt
+  ++++ NVD_Fleet_US_CA_2018
+  +++++ CA_ImageGalleryMapping_2018_Vehicle.txt
+  ++++ ...
+  ++++ NVD_Fleet_US_EN_<Year>
+  +++++ US_ImageGalleryMapping_<Year>_Vehicle.txt
+  ++++ NVD_Fleet_US_CA_<year>
+  +++++ CA_ImageGalleryMapping_<Year>_Vehicle.txt
+}
+
+{T
+  + ebx_interface_files
+  ++ vehicle
+  +++ images
+  ++++ 2018AUS050001_640
+  +++++ 2018AUS050001_640_01.png
+  +++++ 2018AUS050001_640_02.png
+  +++++ 2018AUS050001_640_03.png
+  +++++ 2018AUS050001_640_12.png
+  ++++ ...
+  ++++ <Image ID>
+  +++++ <File Name>
+}
+}
+
+@enduml

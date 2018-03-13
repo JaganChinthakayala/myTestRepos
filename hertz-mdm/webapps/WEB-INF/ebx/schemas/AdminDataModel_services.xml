@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=AdminDataModel] on Wed Aug 23 14:33:11 EDT 2017 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="ClearPermissionUserCacheService">
+        <documentation xml:lang="en-US">
+            <label>Clear Permission User Cache</label>
+        </documentation>
+        <resourcePath>/services/common/ClearPermissionsUserCache.jsp</resourcePath>
+        <permissions class="com.orchestranetworks.ps.servicepermission.TechAdminOnlyServicePermission"/>
+        <displayInMenu>true</displayInMenu>
+        <orderInMenu>20</orderInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="ExportDevArtifacts">
+        <documentation xml:lang="en-US">
+            <label>Export Dev Artifacts</label>
+        </documentation>
+        <resourcePath>/services/common/ExportDevArtifacts.jsp</resourcePath>
+        <permissions class="com.orchestranetworks.ps.servicepermission.TechAdminOnlyServicePermission"/>
+        <displayInMenu>true</displayInMenu>
+        <orderInMenu>10</orderInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="ImportDevArtifacts">
+        <documentation xml:lang="en-US">
+            <label>Import Dev Artifacts</label>
+        </documentation>
+        <resourcePath>/services/common/ImportDevArtifacts.jsp</resourcePath>
+        <permissions class="com.orchestranetworks.ps.servicepermission.TechAdminOnlyServicePermission"/>
+        <displayInMenu>true</displayInMenu>
+        <orderInMenu>20</orderInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

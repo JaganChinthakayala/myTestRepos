@@ -1,0 +1,30 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+
+USE [MDM_DEV]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[vwVehicleAsset]
+AS
+SELECT
+       VA.assetTag
+      ,VA.area_
+      ,VA.unitNumber
+      ,VA.licenseRegistrationCountry_
+      ,VA.licenseRegistrationState_
+      ,VA.id00
+      ,VA.sourceSystem
+      ,VHCL.vehicleIdentificationNumber as VIN
+      ,VA.vehicleFkey_
+	  ,VA.T_LAST_USER_ID
+      ,VA.T_CREATOR_ID
+      ,VA.T_CREATION_DATE
+      ,VA.T_LAST_WRITE
+ FROM dbo.EBX_db_vhcl_vehicle_asset as VA
+				LEFT OUTER JOIN  dbo.EBX_db_vhcl_vehicle as VHCL ON VA.vehicleFkey_ = VHCL.id
+ where VA.DaqaMetaData_State = 'Golden'

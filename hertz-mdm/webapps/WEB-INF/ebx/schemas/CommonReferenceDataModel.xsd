@@ -1,0 +1,2911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=CommonReferenceDataModel] on Fri Nov 17 16:45:30 EST 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:include schemaLocation="./CommonTypesDataModel.xsd"/>
+    <xs:include schemaLocation="./BasicTypesDataModel.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:extensions class="com.hertz.mdm.common.schemaextension.CommonReferenceSchemaExtension"/>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../hertz-mdm/webapps/hertz-mdm/../../src">
+                <javaPathConstants typeName="com.hertz.mdm.common.path.CommonReferencePaths">
+                    <nodes root="/" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+            <osd:replication>
+                <name>CommonReferenceDataSet</name>
+                <dataSpace>CommonReferenceMasterDataSpace</dataSpace>
+                <dataSet>CommonReferenceDataSet</dataSet>
+                <refresh>onCommit</refresh>
+                <table>
+                    <path>/root/Airline</path>
+                    <nameInDatabase>db_comm_comref_airline</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Airport</path>
+                    <nameInDatabase>db_comm_comref_airport</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/City</path>
+                    <nameInDatabase>db_comm_comref_city</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Continent</path>
+                    <nameInDatabase>db_comm_comref_continent</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Country_ISO3166-1</path>
+                    <nameInDatabase>db_comm_comref_country_iso3166_1</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/CountryTimeZoneRelationship</path>
+                    <nameInDatabase>db_comm_comref_country_timezone_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Currency</path>
+                    <nameInDatabase>db_comm_comref_currency</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/DaysOfWeek</path>
+                    <nameInDatabase>db_comm_comref_days_of_week</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/EMailAddressType</path>
+                    <nameInDatabase>db_comm_comref_email_address_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/EMailNotificationBusinessPartyRelationship</path>
+                    <nameInDatabase>db_comm_comref_email_notification_business_party_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/GeographicArea</path>
+                    <nameInDatabase>db_comm_comref_geographic_area</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Note</path>
+                    <nameInDatabase>db_comm_comref_note</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/NoteType</path>
+                    <nameInDatabase>db_comm_comref_note_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/PhoneType</path>
+                    <nameInDatabase>db_comm_comref_phone_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/RentalCarBrand</path>
+                    <nameInDatabase>db_comm_comref_rental_car_brand</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/SourceSystem</path>
+                    <nameInDatabase>db_comm_comref_source_system</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/StateProvinceTimeZoneRelationship</path>
+                    <nameInDatabase>db_comm_comref_state_province_timezone_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Subdivision_ISO3166-2</path>
+                    <nameInDatabase>db_comm_comref_subdivision_iso3166_2</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/TimeZone</path>
+                    <nameInDatabase>db_comm_comref_timezone</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/UnitOfMeasure</path>
+                    <nameInDatabase>db_comm_comref_unit_of_measure</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Website</path>
+                    <nameInDatabase>db_comm_comref_website</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/AddressType</path>
+                    <nameInDatabase>db_comm_comref_address_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/emailNotification</path>
+                    <nameInDatabase>db_comm_comref_email_notification</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/MDMCommonReferenceTable</path>
+                    <nameInDatabase>db_comm_comref_reference_table</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/language</path>
+                    <nameInDatabase>db_comm_comref_language</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/OfficialAirlineGuide</path>
+                    <nameInDatabase>db_comm_comref_oag</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/PaymentType</path>
+                    <nameInDatabase>db_comm_comref_payment_type</nameInDatabase>
+                </table>
+            </osd:replication>
+            <osd:replication>
+                <name>CommonReferenceDataSetFrench</name>
+                <dataSpace>CommonReferenceMasterDataSpace</dataSpace>
+                <dataSet>CommonReferenceDataSet-French</dataSet>
+                <refresh>onDemand</refresh>
+                <table>
+                    <path>/root/Airline</path>
+                    <nameInDatabase>db_fr_comm_comref_airline</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Airport</path>
+                    <nameInDatabase>db_fr_comm_comref_airport</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/City</path>
+                    <nameInDatabase>db_fr_comm_comref_city</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Continent</path>
+                    <nameInDatabase>db_fr_comm_comref_continent</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Country_ISO3166-1</path>
+                    <nameInDatabase>db_fr_comm_comref_country_iso3166_1</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/CountryTimeZoneRelationship</path>
+                    <nameInDatabase>db_fr_comm_comref_country_timezone_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Currency</path>
+                    <nameInDatabase>db_fr_comm_comref_currency</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/DaysOfWeek</path>
+                    <nameInDatabase>db_fr_comm_comref_days_of_week</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/EMailAddressType</path>
+                    <nameInDatabase>db_fr_comm_comref_email_address_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/EMailNotificationBusinessPartyRelationship</path>
+                    <nameInDatabase>db_fr_comm_comref_email_notification_business_party_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/GeographicArea</path>
+                    <nameInDatabase>db_fr_comm_comref_geographic_area</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Note</path>
+                    <nameInDatabase>db_fr_comm_comref_note</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/NoteType</path>
+                    <nameInDatabase>db_fr_comm_comref_note_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/PhoneType</path>
+                    <nameInDatabase>db_fr_comm_comref_phone_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/RentalCarBrand</path>
+                    <nameInDatabase>db_fr_comm_comref_rental_car_brand</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/SourceSystem</path>
+                    <nameInDatabase>db_fr_comm_comref_source_system</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/StateProvinceTimeZoneRelationship</path>
+                    <nameInDatabase>db_fr_comm_comref_state_province_timezone_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Subdivision_ISO3166-2</path>
+                    <nameInDatabase>db_fr_comm_comref_subdivision_iso3166_2</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/TimeZone</path>
+                    <nameInDatabase>db_fr_comm_comref_timezone</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/UnitOfMeasure</path>
+                    <nameInDatabase>db_fr_comm_comref_unit_of_measure</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Website</path>
+                    <nameInDatabase>db_fr_comm_comref_website</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/AddressType</path>
+                    <nameInDatabase>db_fr_comm_comref_address_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/emailNotification</path>
+                    <nameInDatabase>db_fr_comm_comref_email_notification</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/MDMCommonReferenceTable</path>
+                    <nameInDatabase>db_fr_comm_comref_reference_table</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/language</path>
+                    <nameInDatabase>db_fr_comm_comref_language</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/OfficialAirlineGuide</path>
+                    <nameInDatabase>db_fr_comm_comref_oag</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/PaymentType</path>
+                    <nameInDatabase>db_fr_comm_comref_payment_type</nameInDatabase>
+                </table>
+            </osd:replication>
+            <osd:replication>
+                <name>CommonReferenceDataSetSpanish</name>
+                <dataSpace>CommonReferenceMasterDataSpace</dataSpace>
+                <dataSet>CommonReferenceDataSet-Spanish</dataSet>
+                <refresh>onDemand</refresh>
+                <table>
+                    <path>/root/Airline</path>
+                    <nameInDatabase>db_sp_comm_comref_airline</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Airport</path>
+                    <nameInDatabase>db_sp_comm_comref_airport</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/City</path>
+                    <nameInDatabase>db_sp_comm_comref_city</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Continent</path>
+                    <nameInDatabase>db_sp_comm_comref_continent</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Country_ISO3166-1</path>
+                    <nameInDatabase>db_sp_comm_comref_country_iso3166_1</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/CountryTimeZoneRelationship</path>
+                    <nameInDatabase>db_sp_comm_comref_country_timezone_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Currency</path>
+                    <nameInDatabase>db_sp_comm_comref_currency</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/DaysOfWeek</path>
+                    <nameInDatabase>db_sp_comm_comref_days_of_week</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/EMailAddressType</path>
+                    <nameInDatabase>db_sp_comm_comref_email_address_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/EMailNotificationBusinessPartyRelationship</path>
+                    <nameInDatabase>db_sp_comm_comref_email_notification_business_party_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/GeographicArea</path>
+                    <nameInDatabase>db_sp_comm_comref_geographic_area</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Note</path>
+                    <nameInDatabase>db_sp_comm_comref_note</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/NoteType</path>
+                    <nameInDatabase>db_sp_comm_comref_note_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/PhoneType</path>
+                    <nameInDatabase>db_sp_comm_comref_phone_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/RentalCarBrand</path>
+                    <nameInDatabase>db_sp_comm_comref_rental_car_brand</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/SourceSystem</path>
+                    <nameInDatabase>db_sp_comm_comref_source_system</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/StateProvinceTimeZoneRelationship</path>
+                    <nameInDatabase>db_sp_comm_comref_state_province_timezone_relationship</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Subdivision_ISO3166-2</path>
+                    <nameInDatabase>db_sp_comm_comref_subdivision_iso3166_2</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/TimeZone</path>
+                    <nameInDatabase>db_sp_comm_comref_timezone</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/UnitOfMeasure</path>
+                    <nameInDatabase>db_sp_comm_comref_unit_of_measure</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/Website</path>
+                    <nameInDatabase>db_sp_comm_comref_website</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/AddressType</path>
+                    <nameInDatabase>db_sp_comm_comref_address_type</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/emailNotification</path>
+                    <nameInDatabase>db_sp_comm_comref_email_notification</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/MDMCommonReferenceTable</path>
+                    <nameInDatabase>db_sp_comm_comref_reference_table</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/language</path>
+                    <nameInDatabase>db_sp_comm_comref_language</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/OfficialAirlineGuide</path>
+                    <nameInDatabase>db_sp_comm_comref_oag</nameInDatabase>
+                </table>
+                <table>
+                    <path>/root/PaymentType</path>
+                    <nameInDatabase>db_sp_comm_comref_payment_type</nameInDatabase>
+                </table>
+            </osd:replication>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="acriss" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>ACRISS</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AddressType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Address Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Airline" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Airline</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/IATA </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./IATA} ${./name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="IATA" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>IATA</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="name" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Alias" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Alias</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="callSign" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Call Sign</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Airport" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Airport (IATA)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/iataFAA </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./iataFcc} -${./Name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="iataFAA" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>IATA / FAA Code</osd:label>
+                                        <osd:description>3-letter FAA code, for airports located in Country "United States of America".&#13;
+3-letter IATA code, for all other airports</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="iataFcc" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>IATA / FCC Code</osd:label>
+                                        <osd:description>3-letter FAA code, for airports located in Country "United States of America".&#13;
+3-letter IATA code, for all other airports</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Name" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="City" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>City</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Country" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Country</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="region" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Region</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Subdivision_ISO3166-2</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Latitude" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Latitude</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Longitude" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Longitude</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Altitude" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Altitude</osd:label>
+                                        <osd:description>In feet.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Timezone" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Timezone</osd:label>
+                                        <osd:description>Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="DST" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>DST</osd:label>
+                                        <osd:description>Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand), N (None) or U (Unknown).</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="isAirportOperations" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Airport Operations?</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isMilitary" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Military?</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="municipality" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Municipality</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="airportType" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Airport Type</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                        <xs:enumeration osd:label="Small Airport" value="SMALL_AIRPORT"/>
+                                        <xs:enumeration osd:label="Medium Airport" value="MEDIUM_AIRPORT"/>
+                                        <xs:enumeration osd:label="Large Airport" value="LARGE_AIRPORT"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="identifier" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Identifier</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="City" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>City</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Country</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Country_ISO3166-1</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Continent" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Continent</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Country_ISO3166-1" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Country (ISO 3166-1)</osd:label>
+                            <osd:description>ISO 3166-1 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for the names of countries, dependent territories, and special areas of geographical interest. The official name of the standard is Codes for the representation of names of countries and their subdivisions – Part 1: Country codes. </osd:description>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>(copie)ISO 3166-1</osd:label>
+                            <osd:description>ISO 3166-1 est une des parties de la norme ISO 3166. Publiée pour la première fois en 1974 par l’ISO, elle attribue 3 codes pour les pays du monde :&#13;
+&#13;
+ISO 3166-1 alpha-2 : codes à deux lettres pour de nombreuses applications, notamment les domaines de premier niveau pour chaque pays, ou les codes des unités monétaires ISO 4217.&#13;
+ISO 3166-1 alpha-3 : codes à trois lettres.&#13;
+ISO 3166-1 numeric : codes à trois chiffres, identiques à ceux définis par la Division statistique des Nations unies, dans la spécification UN M.49.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ISO3166-1_integer </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./shortName} - ${./ISO3166-1_alpha-2}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO3166-1_integer" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ISO 3166-1 Integer</osd:label>
+                                        <osd:description>The ISO 3166-1 Numeric as an integer</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>ISO 3166-1 Entier</osd:label>
+                                        <osd:description>Le code numérique ISO 3166-1 comme entier</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ISO3166-1_alpha-2" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Alpha 2 Code</osd:label>
+                                        <osd:description>Two-letter country codes which are the most widely used of the three, and used most prominently for the Internet's country code top-level domains (with a few exceptions).</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code Alpha 2</osd:label>
+                                        <osd:description>Codes à deux lettres pour de nombreuses applications, notamment les domaines de premier niveau pour chaque pays, ou les codes des unités monétaires ISO 4217.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ISO3166-1_alpha-3" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Alpha-3 code</osd:label>
+                                        <osd:description>Three-letter country codes which allow a better visual association between the codes and the country names than the alpha-2 codes.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code Alpha-3</osd:label>
+                                        <osd:description>Codes à trois lettres.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ISO3166-1_numeric" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Numeric</osd:label>
+                                        <osd:description>Three-digit country codes which are identical to those developed and maintained by the United Nations Statistics Division, with the advantage of script (writing system) independence, and hence useful for people or systems using non-Latin scripts.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Numérique</osd:label>
+                                        <osd:description>Codes à trois chiffres, identiques à ceux définis par la Division statistique des Nations unies, dans la spécification UN M.49.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="shortName" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Short Name</osd:label>
+                                        <osd:description>Name of the country</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom court</osd:label>
+                                        <osd:description>Nom du pays</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="shortName_fr" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Short Name (FR)</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom court (FR)</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="itu" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ITU</osd:label>
+                                        <osd:description>Codes assigned by the International Telecommunications Union</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>ITU</osd:label>
+                                        <osd:description>Codes des l'union internationale des télécommunications</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="marc" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>MARC</osd:label>
+                                        <osd:description>MAchine-Readable Cataloging codes from the Library of Congress</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>MARC</osd:label>
+                                        <osd:description>Code de la librairie du Congrès</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="wmo" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>WMO</osd:label>
+                                        <osd:description>Country abbreviations by the World Meteorological Organization</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>WMO</osd:label>
+                                        <osd:description>Code de l'organisation mondiale météorologique</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ds" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>DS</osd:label>
+                                        <osd:description>Distinguishing signs of vehicles in international traffic</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>DS</osd:label>
+                                        <osd:description>Signes distinctifs des véhicules pour le trafic international</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="dial" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Dial</osd:label>
+                                        <osd:description>Country code from ITU-T recommendation E.164, sometimes followed by area code</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Dial</osd:label>
+                                        <osd:description>Code pays de ITU-T, recommandation E.164, parfois suivi du code région</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="fifa" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>FIFA</osd:label>
+                                        <osd:description>Codes assigned by the Fédération Internationale de Football Association</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>FIFA</osd:label>
+                                        <osd:description>Codes assignés par la fédération internationale de football </osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="fips" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>FIPS</osd:label>
+                                        <osd:description>Codes from the U.S. standard FIPS PUB 10-4</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>FIPS</osd:label>
+                                        <osd:description>Codes du standard américain FIPS PUB 10-4</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="gaul" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GAUL</osd:label>
+                                        <osd:description>Global Administrative Unit Layers from the Food and Agriculture Organization</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GAUL</osd:label>
+                                        <osd:description>Unités administratives de l'organisation de l'alimentation et de l'agriculture</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ioc" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>IOC</osd:label>
+                                        <osd:description>Codes assigned by the International Olympics Committee</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>IOC</osd:label>
+                                        <osd:description>Codes assignés par le comité international olympique</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="currency-alpha-code" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency Alpha Code</osd:label>
+                                        <osd:description>ISO 4217 currency alphabetic code</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code devise alpha</osd:label>
+                                        <osd:description>Code alphabétique de devise ISO 4217</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Currency</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="currency-country-name" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency Country Name</osd:label>
+                                        <osd:description>ISO 4217 country name</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom de pays devise</osd:label>
+                                        <osd:description>Nom de pays ISO 4217</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="currency-minor-unit" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency Minor Unit</osd:label>
+                                        <osd:description>ISO 4217 currency number of minor units</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Unité mineure de devise</osd:label>
+                                        <osd:description>Numéro de de devise ISO 4217</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="currency-name" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency Name</osd:label>
+                                        <osd:description>ISO 4217 currency name</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom de la devise</osd:label>
+                                        <osd:description>Nom de la devise ISO 4217</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="currency-numeric-code" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency Numeric Code</osd:label>
+                                        <osd:description>ISO 4217 currency numeric code</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code numérique de devise</osd:label>
+                                        <osd:description>Code numérique de devise ISO 4217</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="is-idependent" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is independent</osd:label>
+                                        <osd:description>Country status, based on the CIA World Factbook</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Indépendance</osd:label>
+                                        <osd:description>Statut du pays, basé sur le CIA World Factbook</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="subdivisions" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivisions</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/Subdivision_ISO3166-2/ISO3166-1_Integer</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="timezones" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Time Zones</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <linkTable>
+                                                <table>/root/CountryTimeZoneRelationship</table>
+                                                <fieldToSource>/root/CountryTimeZoneRelationship/country</fieldToSource>
+                                                <fieldToTarget>/root/CountryTimeZoneRelationship/timezone</fieldToTarget>
+                                            </linkTable>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="cities" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Cities</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/City/country</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CountryTimeZoneRelationship" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Country/Time Zone Relationship</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/country /timezone </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./country} - ${./timezone}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="country" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Country</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Country_ISO3166-1</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="timezone" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Time Zone</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/TimeZone</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Currency" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Currency</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DaysOfWeek" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Days Of Week</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./dayOfTheWeek}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Id</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="dayOfTheWeek" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Day Of The Week</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                        <xs:enumeration value="Sunday"/>
+                                        <xs:enumeration value="Monday"/>
+                                        <xs:enumeration value="Tuesday"/>
+                                        <xs:enumeration value="Wednesday"/>
+                                        <xs:enumeration value="Thursday"/>
+                                        <xs:enumeration value="Friday"/>
+                                        <xs:enumeration value="Saturday"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="UniqueOn_root_DaysOfWeekC0985509-0885-4E62-B9DD-EB1F8C940318">
+                        <xs:selector xpath="."/>
+                        <xs:field xpath="dayOfTheWeek"/>
+                    </xs:unique>
+                </xs:element>
+                <xs:element name="EMailAddressType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>EMail Address Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="emailNotification" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>EMail Notification</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./domain} - ${./projectType} - ${./projectTypeEvent}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Id</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:autoIncrement/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="domain" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Domain</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="Domain">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="projectType" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Project Type</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>AdminDataSet</container>
+                                                <branch>AdminDataSpace</branch>
+                                                <tablePath>/root/ProjectType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="_projectTypeName" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Project Type Name</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:inheritance>
+                                            <sourceRecord>/root/emailNotification/projectType</sourceRecord>
+                                            <sourceNode>./projectType</sourceNode>
+                                        </osd:inheritance>
+                                        <osd:defaultView>
+                                            <hidden>true</hidden>
+                                            <hiddenInSearch>true</hiddenInSearch>
+                                            <hiddenInViews>true</hiddenInViews>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                        </osd:defaultView>
+                                        <osd:replication disable="true"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="projectTypeEvent" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Project Type Event</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                        <xs:enumeration value="Success"/>
+                                        <xs:enumeration value="Cancel"/>
+                                        <xs:enumeration value="Fail"/>
+                                        <xs:enumeration value="Inbox"/>
+                                        <xs:enumeration value="Escalation"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="message" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Message</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="osd:text">
+                                        <xs:maxLength value="4000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="busnessParties" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Business Parties</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/EMailNotificationBusinessPartyRelationship/emailNotification</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="UniqueOn_root_emailNotificationED485FD7-5FE0-40A0-949C-34871086AF35">
+                        <xs:selector xpath="."/>
+                        <xs:field xpath="domain"/>
+                        <xs:field xpath="projectType"/>
+                        <xs:field xpath="projectTypeEvent"/>
+                    </xs:unique>
+                </xs:element>
+                <xs:element name="EMailNotificationBusinessPartyRelationship" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>EMail Notification/Business Party Relationship</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/emailNotification /businessParty </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./emailNotification} - ${./businessParty}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="emailNotification" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>EMail Notification</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/emailNotification</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="businessParty" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Business Party</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>BusinessPartyDataSet</container>
+                                                <branch>BusinessPartyMasterDataSpace</branch>
+                                                <tablePath>/root/BusinessParty</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GeographicArea" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Geographic Area</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="language" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Language</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/description}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MeasurementType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Measurement Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Note" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name} - ${./noteType}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="Base" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="noteType" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Note Type</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/NoteType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="domain" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Domain</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="Domain">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="createdBy" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Created By</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="createdDate" type="xs:dateTime" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Created Date/Time</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="note" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Note</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="osd:text">
+                                        <xs:maxLength value="4000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NoteType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Note Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="OfficialAirlineGuide" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Official Airline Guide (Extended OAG)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/extendedOAGCode </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./extendedOAGCode} - ${./_airport}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="extendedOAGCode" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Extended OAG Code</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="6"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="iataCode" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>IATA Code</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:computationRule>
+                                            <predicate>substring(./extendedOAGCode,1,3)</predicate>
+                                        </osd:computationRule>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Airport</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="_airport" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Airport</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:inheritance>
+                                            <sourceRecord>/root/OfficialAirlineGuide/iataCode</sourceRecord>
+                                            <sourceNode>./Name</sourceNode>
+                                        </osd:inheritance>
+                                        <osd:replication disable="true"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="oagVicinity" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>OAG Vicinity</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:computationRule>
+                                            <predicate>substring(./extendedOAGCode,4,1)</predicate>
+                                        </osd:computationRule>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="locationNumber" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>LocationNumber</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:computationRule>
+                                            <predicate>substring(./extendedOAGCode,5,2)</predicate>
+                                        </osd:computationRule>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PaymentType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Payment Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id /paymentTypeTiming </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name} - ${./paymentTypeTiming}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="paymentTypeTiming" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Payment Type Timing</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                        <xs:enumeration value="Pre-Payment"/>
+                                        <xs:enumeration value="Rental"/>
+                                        <xs:enumeration value="Reservation"/>
+                                        <xs:enumeration value="Return"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PhoneType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Phone Type</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ProjectUserTaskLog" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Project User Task Log</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/id </primaryKeys>
+                                <defaultLabel>${./projectType} - ${./projectName}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Id</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:autoIncrement/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="projectName" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Project Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="projectType" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Project Type</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="userTaskName" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>User Task Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="offeredToRole" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Offered To Role</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="allocatedUser" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Allocated User</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>BusinessPartyDataSet</container>
+                                                <branch>BusinessPartyMasterDataSpace</branch>
+                                                <tablePath>/root/BusinessParty</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="taskStartEndTimestamp" type="DateTimeRangeWithRequiredStartDateTime" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Task Start/End Timestamp</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isUserTaskOverdue" type="xs:boolean" minOccurs="1" maxOccurs="1" default="false" osd:checkNullInput="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is User Task Overdue?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm.location.valuefunction.IsUserTaskOverdueValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isUserTaskActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is User Task Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:computationRule>
+                                            <predicate>condition(osd:is-null(./taskStartEndTimestamp/endDateTime),ifTrue(true()),ifFalse(false()))</predicate>
+                                        </osd:computationRule>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RentalCarBrand" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Rental Car Brand</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="Base" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isHertzBrand" type="xs:boolean" minOccurs="1" maxOccurs="1" default="false" osd:checkNullInput="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Hertz Brand?</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="rentalCarBrandCode" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Rental Car Brand Code</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="intelligentLocationIdBrandCode" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Intelligent Location Id Brand Code</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SourceSystem" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Source System</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="StateProvinceTimeZoneRelationship" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>State Province/Time Zone Relationship</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/stateProvince /timezone </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./stateProvince} - ${./timezone}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="stateProvince" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>State/Province</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Subdivision_ISO3166-2</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="timezone" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Time Zone</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/TimeZone</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active?</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Subdivision_ISO3166-2" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Subdivision (ISO 3166-2)</osd:label>
+                            <osd:description>ISO 3166-2 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for identifying the principal subdivisions (e.g., provinces or states) of all countries coded in ISO 3166-1. The official name of the standard is Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ISO3166-2_Subdivision </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./ISO3166-2_Subdivision} - ${./ISO3166-2_SubdivisionName}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO3166-2_Subdivision" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ISO 3166-2 Subdivision Code</osd:label>
+                                        <osd:description>2 Character Code associated with the State/Province/Region of the applicable Country as defined by the ISO 3166-2 Standard. Note: the "X~" notation in the suffix of the ISO Code denotes that that the ISO 3166-2 Standard currently does not provide a State/Subdivision Code.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>ISO 3166-2 Code de subdivision</osd:label>
+                                        <osd:description>Code de la subdivision administrative (état/province/région) du pays telle que définie par le standard ISO 3166-2</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="6"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ISO3166-2_SubdivisionName" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ISO 3166-2 Subdivision Name</osd:label>
+                                        <osd:description>Name associated with the State/Province/Region of the applicable Country as defined by the ISO 3166-2 Standard.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>ISO 3166-2 Nom de la subdivision</osd:label>
+                                        <osd:description>Nom de la subdivision administrative (état/province/région) du pays telle que définie par le standard ISO 3166-2</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ISO3166-2_SubdivisionAlternateNames" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivision Alternate Names</osd:label>
+                                        <osd:description>Additional alternate names for the Subdivision (State/Province/Region), provided by the World Gazetteer.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom alternatif de la subdivision</osd:label>
+                                        <osd:description>Noms alternatifs de la subdivision administrative (état/province/région).</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="200"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ISO3166-1_Integer" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ISO 3166-1 Integer</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Country_ISO3166-1</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="timezones" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Time Zones</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <linkTable>
+                                                <table>/root/StateProvinceTimeZoneRelationship</table>
+                                                <fieldToSource>/root/StateProvinceTimeZoneRelationship/stateProvince</fieldToSource>
+                                                <fieldToTarget>/root/StateProvinceTimeZoneRelationship/timezone</fieldToTarget>
+                                            </linkTable>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <hiddenInDataServices>true</hiddenInDataServices>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TimeZone" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Time Zone</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="UnitOfMeasure" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Unit of Measure (UOM)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="measurementSystem" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Measurement System</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/MeasurementType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="uomGroup" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Unit of Measure (UOM) Group</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                        <xs:enumeration value="Distance">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">Distance</xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">Distance</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:enumeration>
+                                        <xs:enumeration value="Liquid Volume">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">Liquid Volume</xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">Liquid Volume</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:enumeration>
+                                        <xs:enumeration value="Dry Volume">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">Dry Volume</xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">Dry Volume</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:enumeration>
+                                        <xs:enumeration value="Area">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">Area</xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">Area</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Website" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Website</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <historyProfile>ebx-allBranches</historyProfile>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MDMCommonReferenceTable" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>MDM Common Reference Table</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/base/id </primaryKeys>
+                                <defaultLabel>${./base/name}</defaultLabel>
+                            </osd:table>
+                            <osd:trigger class="com.hertz.mdm.common.trigger.CommonReferencesAndRelationshipTableTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="base" type="BaseStringId" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Base</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="mdmReplicationTable" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>MDM Replication Table Name</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="effectiveStartEndDates" type="DateRangeWithRequiredStartDate" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Start/End Dates</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="isRecordActive" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Is Record Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:function class="com.hertz.mdm._hertz.valuefunction.IsRecordActiveValueFunction"/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

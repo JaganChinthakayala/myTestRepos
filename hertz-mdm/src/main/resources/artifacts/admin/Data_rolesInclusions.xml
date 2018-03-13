@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><directory>
+    <rolesInclusions>
+        <encompassingRole>COMM - RAC Sales Admin</encompassingRole>
+        <includedRole>COMM - Reference Data Entry</includedRole>
+    </rolesInclusions>
+    <rolesInclusions>
+        <encompassingRole>LOCN - New Location Project Initiator</encompassingRole>
+        <includedRole>LOCN - Data Entry</includedRole>
+    </rolesInclusions>
+    <rolesInclusions>
+        <encompassingRole>VHCL - SIPP Data Admin</encompassingRole>
+        <includedRole>VHCL - Data Entry</includedRole>
+    </rolesInclusions>
+    <rolesInclusions>
+        <encompassingRole>VHCL - SIPP Data Approver</encompassingRole>
+        <includedRole>Tech Admin</includedRole>
+    </rolesInclusions>
+    <rolesInclusions>
+        <encompassingRole>VHCL - SIPP Data Approver</encompassingRole>
+        <includedRole>VHCL - Reference Data Approver</includedRole>
+    </rolesInclusions>
+</directory>

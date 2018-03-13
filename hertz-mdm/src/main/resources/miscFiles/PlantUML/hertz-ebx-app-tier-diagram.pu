@@ -1,0 +1,47 @@
+@startuml
+'skinparam handwritten true
+'skinparam defaultFontName Segoe Print
+scale max 845 height
+
+skinparam node {
+  borderColor grey
+}
+skinparam component {
+  borderColor<<active>> green
+  borderColor<<passive>> grey
+}
+skinparam node {
+  backgroundColor<<hertz>> antiquewhite
+  borderColor<<ebx>> navy
+}
+
+() HTTPS
+package "Application Tier" {
+  node "ebxappprod01" <<EBX>> {
+    [Primary EBX Server] <<Active>> as ebx1
+    () HTTPS as ssl1
+  }
+  node "ebxappprod02" <<EBX>> {
+    [Standby EBX Server] <<Passive>> as ebx2
+    () HTTPS as ssl2
+  }
+  node "ebxappprodilb" <<Hertz>> {
+    [Azure Load Balancer] as ebxproxy
+  }
+  [ebxproxy] -u- HTTPS
+  [ebxproxy] -[bold,#green]- ssl1
+  [ebxproxy] .[#red]. ssl2
+
+  ssl1 -[bold,#green]- [ebx1]
+  ssl2 .[#red]. [ebx2]
+}
+
+node "ebxsqlprodilb" <<Hertz>> {
+  [SQL Load Balancer] as sqllb
+}
+
+[ebx1] -[bold,#green]- JDBC
+[ebx2] .[#red]. JDBC
+[sqllb] -u- JDBC
+
+@enduml

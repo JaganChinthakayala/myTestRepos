@@ -1,0 +1,70 @@
+USE [MDM_DEV]
+GO
+
+/****** Object:  View [dbo].[vwVehicle]    Script Date: 11/16/2017 10:26:44 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE VIEW [dbo].[vwVehicle]
+AS
+SELECT
+      id
+      ,sourceSystem
+      ,vehicleIdentificationNumber
+      ,vehicleDescription
+      ,doorCount
+      ,engineCylinders
+      ,model_
+      ,owningCountry_
+      ,seatType_
+      ,sipp_
+      ,sippFirstTwoDigits
+      ,wheelDrive_
+      ,Colors_exteriorColor_
+      ,Colors_interiorColor_
+      ,Colors_roofColor_
+      ,Colors_vehicleColor_
+      ,Features_hasABSBrakes
+      ,Features_hasAirConditioning
+      ,Features_hasAntiTheftOption
+      ,Features_hasAutomaticTransmission
+      ,Features_hasClothSeats
+      ,Features_hasCruiseControl
+      ,Features_hasDriverAirbag
+      ,Features_hasNeverLost
+      ,Features_hasPassengerAirbag
+      ,Features_hasPowerLocks
+      ,Features_hasPowerSeats
+      ,Features_hasPowerWindows
+      ,Features_hasRadio
+      ,Features_hasRearAirbag
+      ,Features_hasSatelliteRadio
+      ,Features_hasSideAirbag
+      ,Features_hasSunroof
+      ,Features_hasTiltWheel
+      ,Features_hasZibox
+      ,Codes_engineCode
+      ,Codes_ignitionKeyCode
+      ,Codes_keylessCode
+      ,Codes_transmissionCode
+      ,Codes_tollPassCode
+      ,Codes_trunkKeyCode
+      ,trim00
+      ,modelYear
+      ,vinCarClass
+      ,manufacturerCode
+      ,manufacturerModelCode
+	  ,T_LAST_USER_ID
+      ,T_CREATOR_ID
+      ,T_CREATION_DATE
+      ,T_LAST_WRITE
+
+   FROM  dbo.EBX_db_vhcl_vehicle
+  where DaqaMetaData_State = 'Golden'
+GO
+
+

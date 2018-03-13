@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?><directory>
+    <usersRoles>
+        <role>BPTY</role>
+        <user>BPTYDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY</role>
+        <user>BPTYDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY</role>
+        <user>BPTYRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY</role>
+        <user>BPTYRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY - Data Approver</role>
+        <user>BPTYDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY - Data Entry</role>
+        <user>BPTYDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY - Reference Data Approver</role>
+        <user>BPTYRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>BPTY - Reference Data Entry</role>
+        <user>BPTYRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>COMM - Reference Data Approver</role>
+        <user>COMMRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>COMM - Reference Data Approver</role>
+        <user>COMMRde3</user>
+    </usersRoles>
+    <usersRoles>
+        <role>COMM - Reference Data Entry</role>
+        <user>COMMRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNAcct</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNAreaMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNBnkRec</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNCarRentVAW</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNCars+Admin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNCarSales</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNCBO</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNCBOAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNCmpIntel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNConc</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNDashAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNEnvAff</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNFacCon</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNFixAsset</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNFleet</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNFleetOrd</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNGDD</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNGDS</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNHier</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNHLERevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNHLESGrp</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNHR</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNITPmo</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNMFDHelp</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNOffsell</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNPropConc</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRACOps</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRACRevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRatesMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRealEstate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRegFin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRegVP</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRentwks</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNResDel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNResDump</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNResMaint</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNRMSSup</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNTax</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNTranslTeam</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNTreasury</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN</role>
+        <user>LOCNYieldMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Accounting</role>
+        <user>LOCNAcct</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Area Manager</role>
+        <user>LOCNAreaMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Bank Reconciliation</role>
+        <user>LOCNBnkRec</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Car Sales</role>
+        <user>LOCNCarSales</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - CarRentVAW</role>
+        <user>LOCNCarRentVAW</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - CARS+ Admin</role>
+        <user>LOCNCars+Admin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Central Back Office</role>
+        <user>LOCNCBO</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Central Back Office Admin</role>
+        <user>JHendrickson</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Central Back Office Admin</role>
+        <user>KLanderson</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Central Back Office Admin</role>
+        <user>LOCNCBOAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Competitive Intelligence</role>
+        <user>LOCNCmpIntel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Concessions</role>
+        <user>LOCNConc</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - DASH Admin</role>
+        <user>LOCNDashAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Data Approver</role>
+        <user>LOCNDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Data Entry</role>
+        <user>LOCNDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Environmental Affairs</role>
+        <user>LOCNEnvAff</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Facilities and Construction</role>
+        <user>LOCNFacCon</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Fixed Assets</role>
+        <user>LOCNFixAsset</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Fleet</role>
+        <user>LOCNFleet</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Fleet Ordering</role>
+        <user>LOCNFleetOrd</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - GDD</role>
+        <user>LOCNGDD</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - GDS</role>
+        <user>LOCNGDS</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Hierarchy Data Steward</role>
+        <user>LOCNHier</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - HLE Revenue Management</role>
+        <user>LOCNHLERevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - HLES Group</role>
+        <user>LOCNHLESGrp</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - HR</role>
+        <user>LOCNHR</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - IT PMO</role>
+        <user>LOCNITPmo</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - MFD Helpdesk</role>
+        <user>LOCNMFDHelp</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - New Location Project Initiator</role>
+        <user>LOCNAreaMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - New Location Project Initiator</role>
+        <user>LOCNCBO</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Offsell</role>
+        <user>LOCNOffsell</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Property and Concessions</role>
+        <user>LOCNPropConc</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - RAC Operations</role>
+        <user>LOCNRACOps</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - RAC Revenue Management</role>
+        <user>LOCNRACRevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Rates Manager</role>
+        <user>LOCNRatesMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Real Estate</role>
+        <user>LOCNRealEstate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Reference Data Approver</role>
+        <user>LOCNRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Reference Data Entry</role>
+        <user>LOCNRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Regional Finance</role>
+        <user>LOCNRegFin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Regional VP</role>
+        <user>LOCNRegVP</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Rentworks</role>
+        <user>LOCNRentwks</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Res Delivery</role>
+        <user>LOCNResDel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Res Dump</role>
+        <user>LOCNResDump</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Res Maint</role>
+        <user>LOCNResMaint</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Revenue Manager</role>
+        <user>LOCNRevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - RMS Support</role>
+        <user>LOCNRMSSup</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Tax</role>
+        <user>LOCNTax</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Translation Team</role>
+        <user>LOCNTranslTeam</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Treasury</role>
+        <user>LOCNTreasury</user>
+    </usersRoles>
+    <usersRoles>
+        <role>LOCN - Yield Manager</role>
+        <user>LOCNYieldMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>AssignArea</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>BankReconciliation_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>BankReconciliation_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CarRent</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>Cars+</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>Cars+Admin_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>Cars+Admin_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CarSalesRealEstate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CBOStaffedProjects</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ChartOfAccounts</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CloseDRBLocations</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CloseLocation</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CloseLocationApprovals</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CompetitiveIntelligence</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>CreateNewLocation</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>DisplayITQuestionnaire</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>DisplayITQuestionnaire_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>DisplayITQuestionnaire_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>DisplayITQuestionnaire_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterActualCloseDate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterActualCloseDate_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterActualCloseDate_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterAreaBanding</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterCMSData</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterGDDData</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterIndicatorData</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterLocationNumber</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterProductsAndServices_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterProductsAndServices_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterRatesFees</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>EnterTaxData</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>FacilitiesRestoration</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>FinalInspection</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>FixedAsset</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>GDDGDS</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HandleDependentChildren</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HandleFuelCards_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HandleTrashServices_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HandleUtilities_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HandleUtilities_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HelpDesk</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HierarchyDataSteward</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>HR</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>InformationTechnology</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>InformationTechnology_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>InformationTechnology_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>InformationTechnology_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>MDFCopierPickup</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>MFDHelpDesk_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>MFDHelpDesk_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>MoveLocation</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>MoveLocationApprovals</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>Offsell</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>PostCloseChecklist</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>PreCloseChecklist</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ProcessExpiredLocationProject</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>PropertyAndConcessions</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnly</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnly_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnly_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnly_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnlyAll</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnlyAll_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnlyAll_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReadOnlyAll_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RegionalRealEstate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RentWorks</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReservationDelivery</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReservationDelivery_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReservationDelivery_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ReservationsMerged</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>ResFix</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RevenueManager</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RevenueManager_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RevenueManager_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RevenueManager_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>RMSSupport</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>Treasury_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>Treasury_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateDash_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateDash_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateHLES_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateHLES_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateOracleHR_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateOracleHR_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateOracleHR_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateProjectedCloseDate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateRentworks_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateResMaint_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateResMaint_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateRMS_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateVerisae_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateVerisae_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateWebsites_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateWebsites_Move_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>UpdateWebsites_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>YieldManager</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>YieldManager_Close_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Permissions User</role>
+        <user>YieldManager_Open_Location</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Tech Admin</role>
+        <user>techAdminOnly</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>adminOnly</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>ALevy</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>BPTYDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>BPTYDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>BPTYRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>BPTYRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>COMMRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>COMMRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>COMMRde1</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>COMMRde2</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>COMMRde3</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>JHendrickson</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>KLanderson</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNAcct</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNAreaMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNBnkRec</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNCarRentVAW</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNCars+Admin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNCarSales</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNCBO</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNCBOAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNCmpIntel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNConc</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNDashAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNEnvAff</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNFacCon</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNFixAsset</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNFleet</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNFleetOrd</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNGDD</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNGDS</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNHier</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNHLERevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNHLESGrp</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNHR</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNITPmo</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNMFDHelp</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNOffsell</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNPropConc</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRACOps</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRACRevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRatesMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRealEstate</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRegFin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRegVP</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRentwks</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNResDel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNResDump</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNResMaint</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRevMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNRMSSup</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNTax</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNTranslTeam</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNTreasury</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>LOCNYieldMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>MCangialosi</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>POrdal</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>RRangel</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>SIPPDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>techAdminOnly</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>VHCLDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>VHCLDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>VHCLRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>Test User</role>
+        <user>VHCLRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>LOCNAreaMgr</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>LOCNCBO</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>LOCNCBOAdmin</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>VHCLDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>VHCLDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>VHCLRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL</role>
+        <user>VHCLRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Data Approver</role>
+        <user>VHCLDa</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Data Entry</role>
+        <user>VHCLDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Fleet Operations Admin</role>
+        <user>ALevy</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Reference Data Approver</role>
+        <user>MCangialosi</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Reference Data Approver</role>
+        <user>VHCLRda</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Reference Data Entry</role>
+        <user>JHendrickson</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - Reference Data Entry</role>
+        <user>VHCLRde</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - SIPP Data Admin</role>
+        <user>SIPPDe</user>
+    </usersRoles>
+    <usersRoles>
+        <role>VHCL - SIPP Data Approver</role>
+        <user>MCangialosi</user>
+    </usersRoles>
+</directory>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=LocationDataModel] on Tue Feb 06 15:52:58 EST 2018 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="DisplayFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Display Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/DisplayValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateDataDictionary">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Dictionary</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataDictionary.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>disabled</defaultPermission>
+    </service>
+    <service name="GenerateDataModelDiagram">
+        <documentation xml:lang="en-US">
+            <label>Generate Data Model Diagram</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateDataModelDiagram.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="GenerateFullValidationReport">
+        <documentation xml:lang="en-US">
+            <label>Generate Full Validation Report</label>
+        </documentation>
+        <resourcePath>/services/common/GenerateValidationReport.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchCloseLocationWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Close Location</label>
+            <description>Launch a Close Location Workflow from Location Project</description>
+        </documentation>
+        <resourcePath>/services/location/LaunchCloseLocationRequest.jsp</resourcePath>
+        <permissions class="com.hertz.mdm.location.servicepermission.LocationStatusOnlyServicePermission">
+            <allowInsideWorkflow>false</allowInsideWorkflow>
+        </permissions>
+        <activation>
+            <onDataModel>
+                <path>/root/Location{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainLocationHierarchyWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Location Hierarchy</label>
+        </documentation>
+        <resourcePath>/services/location/LaunchMaintainLocationHierarchyRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Area{1}</path>
+                <path>/root/LocationHierarchy</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMaintainLocationWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Maintain Location Data</label>
+        </documentation>
+        <resourcePath>/services/location/LaunchMaintainLocationRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Location{1}</path>
+                <path>/root/Area{1}</path>
+                <path>/root/LocationHierarchy{1}</path>
+                <path>/root/LocationData/Address{1}</path>
+                <path>/root/LocationData/Contact{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchMoveLocationWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Move Location</label>
+            <description>Launch a Close Location Workflow from Location Project</description>
+        </documentation>
+        <resourcePath>/services/location/LaunchMoveLocationRequest.jsp</resourcePath>
+        <permissions class="com.hertz.mdm.location.servicepermission.LocationStatusOnlyServicePermission">
+            <allowInsideWorkflow>false</allowInsideWorkflow>
+        </permissions>
+        <activation>
+            <onDataModel>
+                <path>/root/Location{1}</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchOpenLocationWorkflow">
+        <documentation xml:lang="en-US">
+            <label>Open Location</label>
+            <description>Launch an Open Location Workflow from Location Project</description>
+        </documentation>
+        <resourcePath>/services/location/LaunchOpenLocationRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/LocationProject</path>
+                <path>/root/Location</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="LaunchSendEscaltionEmails">
+        <documentation xml:lang="en-US">
+            <label>Launch Send Escalation Emails</label>
+        </documentation>
+        <resourcePath>/services/location/SendEscaltionEmailsRequest.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Location</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="SetLocationIntelligentLocationIds">
+        <documentation xml:lang="en-US">
+            <label>Set Location Intelligent Location Ids</label>
+        </documentation>
+        <resourcePath>/services/location/SetLocationIntelligentLocationIds.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Location</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="SetPrimaryCurrency">
+        <documentation xml:lang="en-US">
+            <label>Set Primary Currency</label>
+        </documentation>
+        <resourcePath>/services/location/SetPrimaryCurrency.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Location</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+    <service name="SetReplicatedBooleanValues">
+        <documentation xml:lang="en-US">
+            <label>Set Replicated Boolean Values</label>
+        </documentation>
+        <resourcePath>/services/location/SetReplicatedBooleanValues.jsp</resourcePath>
+        <activation>
+            <onDataModel>
+                <path>/root/Location</path>
+            </onDataModel>
+        </activation>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="true"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

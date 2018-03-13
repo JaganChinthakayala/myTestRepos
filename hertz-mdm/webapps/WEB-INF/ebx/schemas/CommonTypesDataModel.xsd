@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=CommonTypesDataModel] on Thu Feb 01 09:37:34 EST 2018 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="BusinessChannel">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Business Channel</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Retail"/>
+            <xs:enumeration value="Catering"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CommonProjectType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Common Project Type</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:simpleType name="Domain">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Domain</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="LOCN"/>
+            <xs:enumeration value="VHCL"/>
+            <xs:enumeration value="PROD"/>
+            <xs:enumeration value="BPTY"/>
+            <xs:enumeration value="COMM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Address">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Address</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="addressLine1" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 1</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="addressLine2" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 2</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="addressLine3" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 3</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Country</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:tableRef>
+                                <container>CommonReferenceDataSet</container>
+                                <branch>CommonReferenceMasterDataSpace</branch>
+                                <tablePath>/root/Country_ISO3166-1</tablePath>
+                            </osd:tableRef>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="stateProvince" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>State/Province</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:tableRef>
+                                <container>CommonReferenceDataSet</container>
+                                <branch>CommonReferenceMasterDataSpace</branch>
+                                <tablePath>/root/Subdivision_ISO3166-2</tablePath>
+                                <filter>
+                                    <predicate>./ISO3166-1_Integer/ISO3166-1_integer=${../country/ISO3166-1_integer}</predicate>
+                                </filter>
+                            </osd:tableRef>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="county" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>County</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="city" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>City</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="postalCode" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Postal Code</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="attention" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Attenton</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="HertzAddress">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Hertz Address</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="streetNumber" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Street Number</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="addressLine1" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 1</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="addressLine2" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 2</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="addressLine3" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 3</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="addressLine4" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Address Line 4</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="country" type="xs:string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Country</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:tableRef>
+                                <container>CommonReferenceDataSet</container>
+                                <branch>CommonReferenceMasterDataSpace</branch>
+                                <tablePath>/root/Country_ISO3166-1</tablePath>
+                            </osd:tableRef>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="stateProvince" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>State/Province</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:tableRef>
+                                <container>CommonReferenceDataSet</container>
+                                <branch>CommonReferenceMasterDataSpace</branch>
+                                <tablePath>/root/Subdivision_ISO3166-2</tablePath>
+                                <filter>
+                                    <predicate>./ISO3166-1_Integer/ISO3166-1_integer=${../country/ISO3166-1_integer}</predicate>
+                                </filter>
+                            </osd:tableRef>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="county" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>County</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="city" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>City</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="cityAlternateNames" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>City Alternate Names</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="osd:text">
+                        <xs:maxLength value="2000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="postalCode" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Postal Code</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="attention" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Attention</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="additionalInformation" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Additional Information</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="osd:text">
+                        <xs:maxLength value="4000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="status" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Status</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="80"/>
+                        <xs:enumeration value="Normalized"/>
+                        <xs:enumeration value="No Result"/>
+                        <xs:enumeration value="Error"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

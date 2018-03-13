@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML for user services generated from EBX5 DMA instance [reference=DataSetExport] on Thu Feb 15 11:28:06 EST 2018 by user [admin].-->
+<services xmlns="urn:ebx-schemas:userServices_1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ebx-schemas:userServices_1.0 http://schema.orchestranetworks.com/userServices_1.0.xsd">
+    <service name="ExportData">
+        <documentation xml:lang="en-US">
+            <label>Data Export Service</label>
+            <description>Service to extract data from tables in flat format</description>
+        </documentation>
+        <resourcePath>/services/common/ExportFunctionality.jsp</resourcePath>
+        <displayInMenu>true</displayInMenu>
+        <confirmation disable="false"/>
+        <defaultPermission>enabled</defaultPermission>
+    </service>
+</services>

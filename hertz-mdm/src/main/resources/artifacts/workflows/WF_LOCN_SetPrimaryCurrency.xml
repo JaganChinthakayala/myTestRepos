@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+    <definition>
+        <process>
+            <moduleName>hertz-mdm</moduleName>
+            <dataContext>
+                <variable>
+                    <name>dataSet</name>
+                    <defaultValue>LocationDataSet</defaultValue>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>record</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>workingDataSpace</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>masterDataSpace</name>
+                    <defaultValue>LocationMasterDataSpace</defaultValue>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>false</outputParameter>
+                </variable>
+                <variable>
+                    <name>xpathToTable</name>
+                    <defaultValue>/root/Location</defaultValue>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>false</outputParameter>
+                </variable>
+                <variable>
+                    <name>currentUserId</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>recordNameValue</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>userTaskCreateDateTime</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>currentUserLabel</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>currentApproverId</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>workflowInstanceCreateDateTime</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>deltaResult</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>isCancelled</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>projectTeamMembers</name>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>true</outputParameter>
+                </variable>
+                <variable>
+                    <name>projectType</name>
+                    <defaultValue>Set Intelligent Location Ids</defaultValue>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>false</outputParameter>
+                </variable>
+                <variable>
+                    <name>domain</name>
+                    <defaultValue>LOCN</defaultValue>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>false</outputParameter>
+                </variable>
+                <variable>
+                    <name>isLaunchedWorkflow</name>
+                    <defaultValue>false</defaultValue>
+                    <inputParameter>true</inputParameter>
+                    <outputParameter>false</outputParameter>
+                </variable>
+            </dataContext>
+            <quickLaunching>false</quickLaunching>
+            <synchronousLaunching>true</synchronousLaunching>
+            <permissionsOnInstances>
+                <administrate>RLOCN - Data Entry</administrate>
+                <disable>RTech Admin</disable>
+                <unpublish>RTech Admin</unpublish>
+                <terminateProcess>RTech Admin</terminateProcess>
+                <restartToken>RTech Admin</restartToken>
+                <resumeProcess>RTech Admin</resumeProcess>
+                <create>RLOCN - Data Entry</create>
+                <allocate>RLOCN - Data Entry</allocate>
+                <view>RLOCN - Data Entry</view>
+                <creatorIsViewer>false</creatorIsViewer>
+            </permissionsOnInstances>
+        </process>
+        <pnode>
+            <idInProcess>-1</idInProcess>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Initial transition</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Transition initiale</label>
+                </localizedDocumentations>
+            </documentation>
+            <firstInProcess>false</firstInProcess>
+            <hiddenInGraphicalView>false</hiddenInGraphicalView>
+        </pnode>
+        <pnode>
+            <idInProcess>18</idInProcess>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Set Primary Currency</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                </localizedDocumentations>
+            </documentation>
+            <firstInProcess>true</firstInProcess>
+            <hiddenInGraphicalView>false</hiddenInGraphicalView>
+            <executionModeOfNextStep>asynchronous</executionModeOfNextStep>
+            <scriptTask>
+                <bean>
+                    <library>false</library>
+                    <osdClass>com.hertz.mdm.location.scripttask.SetPrimaryCurrencyScriptTask</osdClass>
+                </bean>
+            </scriptTask>
+        </pnode>
+        <plink>
+            <fromNode>-1</fromNode>
+            <toNode>18</toNode>
+            <role>other</role>
+        </plink>
+    </definition>
+</root>

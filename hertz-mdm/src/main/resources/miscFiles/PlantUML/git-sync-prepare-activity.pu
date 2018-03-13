@@ -1,0 +1,43 @@
+@startuml
+skinparam monochrome true
+
+start
+
+:git status;
+
+if (local changes?) then (yes)
+  :commit;
+else (no)
+endif
+
+if (changed model(s)?) then (yes)
+  :publish model(s);
+  :generate java paths;
+else (no)
+endif
+
+if (changed anything else?) then (yes)
+  :export dev-artifacts;
+  note
+    only use "Environment Copy"
+    when deploying to external environment
+  end note
+else (no)
+endif
+
+:git status;
+
+if (local changes?) then (yes)
+  if (only changed export date?) then (yes)
+    :replace with HEAD revision;
+  else (no)
+    :commit;
+  endif
+endif
+
+:stop EBX!;
+
+:merge master|
+
+stop
+@enduml

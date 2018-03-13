@@ -1,0 +1,176 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.hertz</groupId>
+  <artifactId>hertz-mdm</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <properties>
+	    <timestamp>${maven.build.timestamp}</timestamp>
+	   	<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+  </properties>
+
+  <repositories>
+	<repository>
+		<id>repo</id>
+		<url>file://C:/Users/jchinthakayala/.m2/repository</url>
+	</repository>
+  </repositories>
+  
+  
+  <dependencies>
+   
+   <!-- EBX Library - External Dependency --> 
+	<dependency>
+	    <groupId>com</groupId>
+	    <artifactId>ebx</artifactId>
+	    <version>5.8.1</version>
+	</dependency>
+
+	<dependency>
+		<groupId>com.orchestranetworks</groupId>
+		<artifactId>ebx-addons</artifactId>
+	    <version>3.12.0</version>
+	</dependency>
+
+    <dependency>
+    	<groupId>com.orchestranetworks.ps.util</groupId>
+    	<artifactId>adminpermissionsutil</artifactId>
+    	<version>1.0</version>
+    </dependency>
+    
+	<dependency>
+	    <groupId>com.orchestranetworks.ebx</groupId>
+	    <artifactId>directorycommons</artifactId>
+	    <version>1.0.0-SNAPSHOT</version>
+	</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-collections4</artifactId>
+	    <version>4.0</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+	<dependency>
+	    <groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+	    <version>2.4</version>
+	</dependency>
+    
+	<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+	<dependency>
+	    <groupId>dom4j</groupId>
+	    <artifactId>dom4j</artifactId>
+	    <version>1.6.1</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>javax.mail</artifactId>
+	    <version>1.5.4</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+	<dependency>
+	    <groupId>org.apache.xmlbeans</groupId>
+	    <artifactId>xmlbeans</artifactId>
+	    <version>2.3.0</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>3.10.1</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>3.10-FINAL</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml-schemas</artifactId>
+	    <version>3.10-FINAL</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	    <version>1.3.170</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.1.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jsp-api</artifactId>
+	    <version>2.0</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.3.1</version>
+	</dependency>
+	
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  
+  </dependencies>
+
+  <build>
+	    <finalName>hertz-mdm</finalName>
+	    
+         <plugins>
+
+             <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+				   <warSourceDirectory>${basedir}/webapps</warSourceDirectory>
+				   <!--  <failOnMissingWebXml>false</failOnMissingWebXml>-->
+				   <!--  <webXml>${basedir}/webapps/WEB-INF/web.xml</webXml>  -->
+					<archiveClasses>true</archiveClasses>
+							<!-- <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>  -->
+			          <archive>
+			            <manifest>
+			              <addClasspath>true</addClasspath>
+			              <classpathPrefix>lib/</classpathPrefix>
+			            </manifest>
+			          </archive>
+		        </configuration>
+		    </plugin>
+	
+         </plugins>
+    
+  </build>
+  
+</project>
